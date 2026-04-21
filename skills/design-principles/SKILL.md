@@ -65,3 +65,5 @@ description: Use when an admin/backend design request is still ambiguous and nee
 3. 页面最重要的动作是什么？
 4. 哪种异常或边界状态最值得优先暴露？
 5. 哪些内容不该和主动作同权出现？
+
+这 5 个问题是精简入口。当需求特别模糊、用户反复说不清、或是跨团队协作场景时，追加使用 `references/diagnostic-questions.md` 里的扩展诊断题（含角色、输入、成功标准、异常链路四个维度的更细问法）。

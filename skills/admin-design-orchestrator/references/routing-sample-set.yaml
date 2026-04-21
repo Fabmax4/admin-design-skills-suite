@@ -296,3 +296,119 @@ cases:
     avoid_layers:
       - "style-guardrails"
     validation_focus: "区分必须保留的反馈和可以降级的装饰性动效。"
+
+  # 反例样本：用于锚定 routing-validation.md 的 Fail 判定形态。
+  # 每条 case 额外带 fail_path / fail_reason 字段。
+
+  - id: "case-25"
+    title: "反例 - 美化后台的触发词误导"
+    prompt: "帮我美化这个后台。"
+    expected_stage: "反例 - 触发词误导"
+    expected_start_skill:
+      - "design-principles"
+    expected_chain:
+      - "design-principles"
+      - "admin-design-review"
+    avoid_layers:
+      - "style-guardrails"
+    fail_path:
+      - "style-guardrails"
+    fail_reason: "「美化」是结果词不是意图词，未澄清直接收视觉属于假修复。"
+    validation_focus: "先启发澄清，不被「美化」字面带偏。"
+
+  - id: "case-26"
+    title: "反例 - 动画不对的问题层错位"
+    prompt: "这个页面的动画我觉得不对。"
+    expected_stage: "反例 - 问题层错位"
+    expected_start_skill:
+      - "admin-design-review"
+    expected_chain:
+      - "admin-design-review"
+    avoid_layers:
+      - "admin-motion"
+    fail_path:
+      - "admin-motion"
+    fail_reason: "用户表达的是结果不满，底层可能是信息层级或状态反馈问题，动画只是症状。"
+    validation_focus: "先 review 定位问题层，不被「动画」字面直接路由。"
+
+  - id: "case-27"
+    title: "反例 - 按 Figma 重做跳过来源澄清"
+    prompt: "按这个 Figma 重做一遍。"
+    expected_stage: "反例 - 来源未澄清"
+    expected_start_skill:
+      - "design-principles"
+    expected_chain:
+      - "design-principles"
+      - "admin-design-patterns"
+    avoid_layers: []
+    fail_path:
+      - "admin-design-patterns"
+    fail_reason: "Figma 是否已经过原则层评审未知；如果 Figma 是营销页化的草图，照搬会固化坏模式。"
+    validation_focus: "先确认 Figma 是已评审结论还是未评审草图。"
+
+  - id: "case-28"
+    title: "反例 - 先别改结构但重新设计一下"
+    prompt: "列表页先别改结构，但重新设计一下。"
+    expected_stage: "反例 - 冲突意图未识别"
+    expected_start_skill:
+      - "admin-design-review"
+    expected_chain:
+      - "admin-design-review"
+    avoid_layers:
+      - "admin-design-patterns"
+    fail_path:
+      - "admin-design-patterns"
+      - "admin-design-review"
+    fail_reason: "「重新设计」在后台语境下几乎必然涉及结构；两个要求互斥，必须先指出冲突。"
+    validation_focus: "识别互斥，让用户选一边，不拼链路。"
+
+  - id: "case-29"
+    title: "反例 - 按钮颜色不对但要重做整页"
+    prompt: "这里的按钮颜色不对，把整个页面重做了吧。"
+    expected_stage: "反例 - 主次意图错位"
+    expected_start_skill:
+      - "design-principles"
+    expected_chain:
+      - "design-principles"
+      - "admin-design-patterns"
+    avoid_layers: []
+    fail_path:
+      - "style-guardrails"
+    fail_reason: "真实主意图是「整个页面重做」，按钮颜色只是情绪触发词；停在 style-guardrails 会漏掉主意图。"
+    validation_focus: "识别情绪触发词背后的真实意图，不照字面分流。"
+
+  # 横向行业样本：非零售语境的正例，验证模型在陌生业务下的分流稳定性。
+
+  - id: "case-30"
+    title: "订阅计费对账后台从零设计"
+    prompt: "帮我设计一个订阅计费对账后台，需要看每日 / 每月应收、对账异常和人工调整。"
+    expected_stage: "模糊目标（多对象、异常驱动）"
+    expected_start_skill:
+      - "design-principles"
+    expected_chain:
+      - "design-principles"
+      - "admin-design-patterns"
+      - "admin-component-contracts"
+      - "admin-visualization"
+      - "admin-design-review"
+    avoid_layers:
+      - "style-guardrails"
+      - "admin-motion"
+    validation_focus: "先判断主任务是处理异常还是查看金额，再决定可视化取舍，不默认做成指标大盘。"
+
+  - id: "case-31"
+    title: "ETL 任务监控台从零设计"
+    prompt: "我们要做一个 ETL 任务监控台，需要看任务链状态、失败堆栈和重跑入口。"
+    expected_stage: "模糊目标（混合任务类型）"
+    expected_start_skill:
+      - "design-principles"
+    expected_chain:
+      - "design-principles"
+      - "admin-design-patterns"
+      - "admin-component-contracts"
+      - "admin-design-review"
+    avoid_layers:
+      - "admin-visualization"
+      - "style-guardrails"
+      - "admin-motion"
+    validation_focus: "识别监控本质是异常驱动而不是图表展示；任务链是否考虑过用 Scan Table + Status Rail 承接。"

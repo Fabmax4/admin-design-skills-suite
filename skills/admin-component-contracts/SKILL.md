@@ -66,6 +66,18 @@ description: Use when turning admin/backend design patterns into reusable compon
 - 不允许批量危险动作脱离已选对象和影响范围说明
 - 不允许详情抽屉失去“回到列表上下文”的语义
 
+## 默认做法
+
+如果用户只给一个组件名，默认先回答这 5 个问题，不要直接出方案：
+
+1. 这个组件对应哪个抽象模式？（回到 `admin-design-patterns` 的模式目录）
+2. 它的最小输入、必备状态、主动作分别是什么？
+3. 它是浮层或反馈类组件吗？如果是，落在 `Modal / Drawer / Popover / Tooltip / Message / Notification` 中哪一个？
+4. 当前项目是否已有对应实现？如果有，是直接复用、扩展，还是必须新造？
+5. 可访问性底线是否满足？（焦点、键盘、对比度、降级）
+
+这 5 个问题回答不完整时，不输出契约字段。
+
 ## 使用提醒
 
 - 最短发起格式可写成 `$admin-component-contracts 抽组件契约` 或 `$admin-component-contracts define component contracts`

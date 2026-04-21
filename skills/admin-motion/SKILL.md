@@ -39,10 +39,11 @@ description: Use when adding or reviewing motion in an admin/backend UI; decidin
 ## 硬规则
 
 - 只为状态变化服务，不为存在感服务
-- 重要反馈不能只靠动画表达
 - 不做与任务无关的背景动画
 - 不做所有卡片统一漂浮或所有数字统一跳动
 - 同一页动效类型尽量少
+- 不做过长转场，单次过渡建议控制在 `200ms` 以内，超过 `300ms` 视为打断扫读节奏
+- 重要状态变化必须在去掉动效后依然能被文字、图标或状态色读出来；不允许只靠动效承载信息（对齐 `prefers-reduced-motion` 降级底线）
 
 ## 使用提醒
 
