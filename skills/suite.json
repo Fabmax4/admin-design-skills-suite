@@ -1,0 +1,58 @@
+{
+  "name": "admin-design-skills-suite",
+  "display_name": "Admin Design Skills Suite",
+  "description": "A progressive set of installable skills for AI-driven admin/backend UI design, covering principles, style guardrails, patterns, component contracts, visualization, motion, orchestration, and review.",
+  "entry_skill": "admin-design-orchestrator",
+  "install_order": [
+    "design-principles",
+    "style-guardrails",
+    "admin-design-patterns",
+    "admin-component-contracts",
+    "admin-visualization",
+    "admin-motion",
+    "admin-design-review",
+    "admin-design-orchestrator"
+  ],
+  "skills": [
+    {
+      "name": "design-principles",
+      "path": "skills/design-principles",
+      "role": "foundation"
+    },
+    {
+      "name": "style-guardrails",
+      "path": "skills/style-guardrails",
+      "role": "foundation"
+    },
+    {
+      "name": "admin-design-patterns",
+      "path": "skills/admin-design-patterns",
+      "role": "structure"
+    },
+    {
+      "name": "admin-component-contracts",
+      "path": "skills/admin-component-contracts",
+      "role": "contract"
+    },
+    {
+      "name": "admin-visualization",
+      "path": "skills/admin-visualization",
+      "role": "expression"
+    },
+    {
+      "name": "admin-motion",
+      "path": "skills/admin-motion",
+      "role": "expression"
+    },
+    {
+      "name": "admin-design-review",
+      "path": "skills/admin-design-review",
+      "role": "review"
+    },
+    {
+      "name": "admin-design-orchestrator",
+      "path": "skills/admin-design-orchestrator",
+      "role": "entry"
+    }
+  ]
+}

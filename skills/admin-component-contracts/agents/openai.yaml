@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Component Contracts"
+  short_description: "Define reusable admin component contracts and limits"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#2F54EB"
+  default_prompt: "Use $admin-component-contracts to define the reusable contract for this admin component."

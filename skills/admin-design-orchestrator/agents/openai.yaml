@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Design Orchestrator"
+  short_description: "Route admin design tasks to the right skills in order"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#FA8C16"
+  default_prompt: "Use $admin-design-orchestrator to choose the right admin design skill flow for this task."

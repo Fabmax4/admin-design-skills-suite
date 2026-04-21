@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Design Review"
+  short_description: "Review admin design outputs across the full skill stack"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#F5222D"
+  default_prompt: "Use $admin-design-review to audit this admin design and rank the fixes by layer."

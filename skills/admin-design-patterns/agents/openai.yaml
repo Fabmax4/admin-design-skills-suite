@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Design Patterns"
+  short_description: "Choose admin page paradigms and reusable pattern blocks"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#1677FF"
+  default_prompt: "Use $admin-design-patterns to choose the page paradigm and pattern blocks for this admin UI."
