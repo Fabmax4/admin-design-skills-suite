@@ -16,6 +16,26 @@
 
 - `admin-design-orchestrator`
 
+## Codex 原生快捷入口
+
+在 Codex 中，用户可以直接用 `/skill-name` 主动触发这套 Skills。
+
+规则：
+
+- `/skill-name` 使用英文 Skill 名
+- 后面的任务描述可以中文或英文
+- 不知道从哪层开始时，默认先用 `/admin-design-orchestrator`
+- 如果输入信息不足，总入口先澄清，再继续下游分流
+
+最短可用格式：
+
+- `/admin-design-orchestrator 设计后台页`
+- `/admin-design-orchestrator design admin page`
+- `/admin-design-patterns 收页面结构`
+- `/admin-design-review review page`
+
+这套写法比长提示词更适合作为日常发起入口。
+
 ## 为什么要渐进式
 
 因为 AI 最容易犯的错误，不是不会画组件，而是：
@@ -29,7 +49,7 @@
 
 ## 分层调用建议
 
-### 用户只给了模糊目标
+### 用户输入信息不足
 
 先用：
 
@@ -43,6 +63,7 @@
 - 判断页面范式
 - 找到第一优先动作
 - 选出主模式块
+- 如果当前输入仍不足，先由总入口拦截澄清
 
 ### 用户已经给了明确页面
 

@@ -9,6 +9,10 @@
 
 ## 从零开始设计后台页
 
+前提：
+
+- 输入信息已足够判断页面范式、主任务和使用角色
+
 1. `design-principles`
 2. `admin-design-patterns`
 3. `style-guardrails`
@@ -19,11 +23,19 @@
 
 ## 已有页面，要重构结构
 
+前提：
+
+- 当前输入已明确页面对象和重构目标
+
 1. `admin-design-patterns`
 2. `admin-component-contracts`
 3. `admin-design-review`
 
 ## 已有结构，只想收视觉
+
+前提：
+
+- 结构已经明确，且用户没有隐含要求重做信息架构
 
 1. `style-guardrails`
 2. 视情况补 `admin-motion`
@@ -31,14 +43,28 @@
 
 ## 数据密集页，要决定图表
 
+前提：
+
+- 页面主任务和关键判断动作已明确
+
 1. `admin-visualization`
 2. `admin-design-review`
 
 ## 抽象后台组件或规范
 
+前提：
+
+- 输入已明确抽象目标和复用范围
+
 1. `admin-design-patterns`
 2. `admin-component-contracts`
 3. `admin-design-review`
+
+## 输入信息不足，先澄清
+
+1. 不进入下游 Skill
+2. 先补 `目标用户 / 页面类型 / 第一优先动作 / 成功标准 / 关键约束`
+3. 用户在澄清后仍说不清时，再进入 `design-principles`
 
 ## 先重构结构，再顺手收视觉
 
@@ -104,5 +130,6 @@
 
 ## 使用提醒
 
+- 先满足前提条件，再套工作流
 - 优先走最短链路
 - 如果上层问题明显存在，先回退，不继续往下层推进

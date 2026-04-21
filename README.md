@@ -15,6 +15,38 @@
 - 默认入口 Skill：[admin-design-orchestrator](skills/admin-design-orchestrator/SKILL.md)
 - 规范总纲：[AI_ADMIN_SKILLS.md](docs/AI_ADMIN_SKILLS.md)
 
+## 用户主动调用 Skill 的快捷入口
+
+用户在 Codex 里可以直接用原生 `/` 范式主动触发 Skill。
+
+规则：
+
+- `/skill-name` 使用 Skill 的英文名
+- `/skill-name` 后面的任务描述可以用中文或英文
+- 不确定该调哪个 Skill 时，默认先用 `/admin-design-orchestrator`
+- 如果输入信息不足，总入口会先要求澄清，而不是直接分流
+
+最短可用格式：
+
+- `/admin-design-orchestrator 设计后台页`
+- `/admin-design-orchestrator design admin page`
+- `/admin-design-review 审查页面`
+- `/admin-design-review review page`
+
+常见快捷入口：
+
+- `/design-principles 明确需求`
+- `/design-principles clarify brief`
+- `/admin-design-patterns 收页面结构`
+- `/admin-design-patterns shape page structure`
+- `/style-guardrails 收视觉`
+- `/admin-component-contracts 抽组件契约`
+- `/admin-visualization 判断是否上图`
+- `/admin-motion 补必要反馈`
+- `/admin-design-review 最终审查`
+
+如果用户已经明确知道自己要做结构、视觉、组件、可视化或 review，可以直接点名对应 Skill。
+
 ## 技能清单
 
 - [design-principles](skills/design-principles/SKILL.md)

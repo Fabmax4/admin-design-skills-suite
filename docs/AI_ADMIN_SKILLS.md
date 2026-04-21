@@ -83,6 +83,34 @@
 
 - [admin-design-orchestrator](../skills/admin-design-orchestrator/SKILL.md)
 
+## 用户主动调用方式
+
+用户在 Codex 中可以直接使用原生 `/` 范式主动调用 Skill，而不是只等总入口自动匹配。
+
+规则：
+
+- `/skill-name` 使用 Skill 的英文名
+- 斜杠后面的任务描述可以直接用中文或英文
+- 不确定时先用 `/admin-design-orchestrator`
+- 输入信息不足时，总入口先拦截澄清
+
+最短可用格式：
+
+- `/admin-design-orchestrator 设计后台页`
+- `/admin-design-orchestrator design admin page`
+- `/admin-design-review 审查页面`
+- `/admin-design-review review page`
+
+按任务直达：
+
+- `/design-principles`：明确需求 / clarify brief
+- `/admin-design-patterns`：收页面结构 / shape page structure
+- `/style-guardrails`：收视觉 / tighten visual guardrails
+- `/admin-component-contracts`：抽组件契约 / define component contracts
+- `/admin-visualization`：判断是否上图 / decide visualization
+- `/admin-motion`：补必要反馈 / refine motion feedback
+- `/admin-design-review`：最终审查 / review design
+
 当前封装状态：
 
 - 每个 Skill 已生成 `agents/openai.yaml`
@@ -103,7 +131,7 @@
 
 - 解决“这个页面究竟应该先服务什么”
 - 防止 AI 一开始就陷入视觉或组件细节
-- 需求模糊时先澄清，不清楚就用启发式问题获取线索
+- 输入信息不足时先澄清；如果用户在澄清后仍无法准确描述，再用启发式问题获取线索
 
 ### 第二层：约束层
 
@@ -160,13 +188,13 @@
 当前先把最核心的两层做成可调用 Skill：
 
 - `admin-design-orchestrator`
-  作为总入口，负责决定从哪一层开始、调用哪些 Skill、何时进入 review
+  作为总入口，先判断输入是否充分；信息不足时先拦截澄清，信息足够后再决定从哪一层开始、调用哪些 Skill、何时进入 review
 - `admin-design-patterns`
   负责页面范式判断、模式块选择、结构回收
 - `admin-component-contracts`
   负责抽象组件契约、新组件判定、实现映射
 - `design-principles`
-  负责在需求模糊时先收敛价值排序、第一优先动作和方向风险
+  负责在输入信息不足时先收敛价值排序、第一优先动作和方向风险
 - `style-guardrails`
   负责在页面结构明确后，把视觉边界和后台骨架收回来
 - `admin-visualization`
