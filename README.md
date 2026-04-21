@@ -19,6 +19,8 @@
 
 用户在 Codex 里可以直接用原生 `/` 范式主动触发 Skill。
 
+速查表见 [docs/quick-start.md](docs/quick-start.md)。
+
 规则：
 
 - `/skill-name` 使用 Skill 的英文名
@@ -60,6 +62,7 @@
 
 ## 文档地图
 
+- [快速开始](docs/quick-start.md)
 - [设计原则](docs/design-principles.md)
 - [样式规范](docs/style-spec.md)
 - [设计模式](docs/design-patterns.md)

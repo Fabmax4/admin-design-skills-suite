@@ -45,6 +45,8 @@
 
 这一套规范已经拆成 7 个部分：
 
+- [快速开始](quick-start.md)
+  给用户直接使用的 `/skill-name` 速查表
 - [设计原则](design-principles.md)
   决定 AI 设计后台时的价值排序和判断标准
 - [样式规范](style-spec.md)
@@ -86,6 +88,8 @@
 ## 用户主动调用方式
 
 用户在 Codex 中可以直接使用原生 `/` 范式主动调用 Skill，而不是只等总入口自动匹配。
+
+如果你只想快速开始，先看 [quick-start.md](quick-start.md)。
 
 规则：
 
