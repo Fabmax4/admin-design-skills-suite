@@ -46,7 +46,7 @@
 这一套规范已经拆成 7 个部分：
 
 - [快速开始](quick-start.md)
-  给用户直接使用的 `/skill-name` 速查表
+  给用户直接使用的 `$skill-name` 速查表
 - [设计原则](design-principles.md)
   决定 AI 设计后台时的价值排序和判断标准
 - [样式规范](style-spec.md)
@@ -87,33 +87,33 @@
 
 ## 用户主动调用方式
 
-用户在 Codex 中可以直接使用原生 `/` 范式主动调用 Skill，而不是只等总入口自动匹配。
+用户在 Codex 中可以直接使用真实的 `$skill-name` 形式主动调用 Skill，而不是只等总入口自动匹配。
 
 如果你只想快速开始，先看 [quick-start.md](quick-start.md)。
 
 规则：
 
-- `/skill-name` 使用 Skill 的英文名
-- 斜杠后面的任务描述可以直接用中文或英文
-- 不确定时先用 `/admin-design-orchestrator`
+- `$skill-name` 使用 Skill 的英文名
+- `$skill-name` 后面的任务描述可以直接用中文或英文
+- 不确定时先用 `$admin-design-orchestrator`
 - 输入信息不足时，总入口先拦截澄清
 
 最短可用格式：
 
-- `/admin-design-orchestrator 设计后台页`
-- `/admin-design-orchestrator design admin page`
-- `/admin-design-review 审查页面`
-- `/admin-design-review review page`
+- `$admin-design-orchestrator 设计后台页`
+- `$admin-design-orchestrator design admin page`
+- `$admin-design-review 审查页面`
+- `$admin-design-review review page`
 
 按任务直达：
 
-- `/design-principles`：明确需求 / clarify brief
-- `/admin-design-patterns`：收页面结构 / shape page structure
-- `/style-guardrails`：收视觉 / tighten visual guardrails
-- `/admin-component-contracts`：抽组件契约 / define component contracts
-- `/admin-visualization`：判断是否上图 / decide visualization
-- `/admin-motion`：补必要反馈 / refine motion feedback
-- `/admin-design-review`：最终审查 / review design
+- `$design-principles`：明确需求 / clarify brief
+- `$admin-design-patterns`：收页面结构 / shape page structure
+- `$style-guardrails`：收视觉 / tighten visual guardrails
+- `$admin-component-contracts`：抽组件契约 / define component contracts
+- `$admin-visualization`：判断是否上图 / decide visualization
+- `$admin-motion`：补必要反馈 / refine motion feedback
+- `$admin-design-review`：最终审查 / review design
 
 当前封装状态：
 

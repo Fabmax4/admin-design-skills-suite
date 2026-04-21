@@ -18,21 +18,21 @@
 
 ## Codex 原生快捷入口
 
-在 Codex 中，用户可以直接用 `/skill-name` 主动触发这套 Skills。
+在 Codex 中，用户可以直接用 `$skill-name` 主动点名这套 Skills。
 
 规则：
 
-- `/skill-name` 使用英文 Skill 名
+- `$skill-name` 使用英文 Skill 名
 - 后面的任务描述可以中文或英文
-- 不知道从哪层开始时，默认先用 `/admin-design-orchestrator`
+- 不知道从哪层开始时，默认先用 `$admin-design-orchestrator`
 - 如果输入信息不足，总入口先澄清，再继续下游分流
 
 最短可用格式：
 
-- `/admin-design-orchestrator 设计后台页`
-- `/admin-design-orchestrator design admin page`
-- `/admin-design-patterns 收页面结构`
-- `/admin-design-review review page`
+- `$admin-design-orchestrator 设计后台页`
+- `$admin-design-orchestrator design admin page`
+- `$admin-design-patterns 收页面结构`
+- `$admin-design-review review page`
 
 这套写法比长提示词更适合作为日常发起入口。
 

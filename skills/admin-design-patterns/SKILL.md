@@ -51,7 +51,7 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
 
 ## 使用提醒
 
-- 最短发起格式可写成 `/admin-design-patterns 收页面结构` 或 `/admin-design-patterns shape page structure`
+- 最短发起格式可写成 `$admin-design-patterns 收页面结构` 或 `$admin-design-patterns shape page structure`
 - 页面结构不清时，先读 `references/page-paradigms.md`
 - 模式块选择不清时，先读 `references/pattern-catalog.md`
 - 判断是否真的要新建模式时，读 `references/review-checklist.md`

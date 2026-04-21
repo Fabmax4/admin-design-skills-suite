@@ -46,7 +46,7 @@ description: Use when adding or reviewing motion in an admin/backend UI; decidin
 
 ## 使用提醒
 
-- 最短发起格式可写成 `/admin-motion 补必要反馈` 或 `/admin-motion refine motion feedback`
+- 最短发起格式可写成 `$admin-motion 补必要反馈` 或 `$admin-motion refine motion feedback`
 - 合适的动效场景看 `references/good-use-cases.md`
 - 常见反模式看 `references/anti-patterns.md`
 - 可访问性和降级要求看 `references/accessibility-and-fallback.md`

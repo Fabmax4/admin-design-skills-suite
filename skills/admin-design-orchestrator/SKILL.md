@@ -77,8 +77,8 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 ## 使用提醒
 
-- 用户主动调用时，优先使用 `/admin-design-orchestrator`
-- 最短发起格式可写成 `/admin-design-orchestrator 设计后台页` 或 `/admin-design-orchestrator design admin page`
+- 用户主动调用时，优先使用 `$admin-design-orchestrator`
+- 最短发起格式可写成 `$admin-design-orchestrator 设计后台页` 或 `$admin-design-orchestrator design admin page`
 - 分流规则看 `references/entry-routing.md`
 - 稳定输入契约看 `references/input-contract.md`
 - 常见组合链路看 `references/workflow-recipes.md`

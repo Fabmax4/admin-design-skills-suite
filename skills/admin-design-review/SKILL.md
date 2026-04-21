@@ -51,7 +51,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 
 ## 使用提醒
 
-- 最短发起格式可写成 `/admin-design-review 审查页面` 或 `/admin-design-review review page`
+- 最短发起格式可写成 `$admin-design-review 审查页面` 或 `$admin-design-review review page`
 - 总审查清单看 `references/review-checklist.md`
 - 常见失效模式看 `references/failure-modes.md`
 - 严重度定义看 `references/severity-model.md`
