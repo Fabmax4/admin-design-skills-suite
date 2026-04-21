@@ -15,8 +15,8 @@
 
 1. `design-principles`
 2. `admin-design-patterns`
-3. `style-guardrails`
-4. `admin-component-contracts`
+3. `admin-component-contracts`
+4. `style-guardrails`
 5. 视情况补 `admin-visualization`
 6. 视情况补 `admin-motion`
 7. `admin-design-review`

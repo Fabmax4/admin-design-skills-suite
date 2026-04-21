@@ -21,13 +21,13 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 2. 先查前置澄清
    如果原始输入信息不足，先判断是否已经通过澄清或启发式问题拿到了足够线索。
 3. 逐层检查
-   依次审查：`design-principles`、`style-guardrails`、`admin-design-patterns`、`admin-component-contracts`、`admin-visualization`、`admin-motion`。
+   依次审查：`design-principles`、`admin-design-patterns`、`admin-component-contracts`、`style-guardrails`、`admin-visualization`、`admin-motion`。
 4. 识别失效层
    每个问题都要归因到具体层级，避免把结构问题错归到视觉问题。
 5. 评定严重度
    使用统一严重度，把“阻断问题”和“可后置打磨”分开。
 6. 输出修复顺序
-   总是先修原则和结构，再修样式和表达，最后才修动效。
+   总是先修原则、结构和契约，再修样式和表达，最后才修动效。
 
 ## 输出格式
 

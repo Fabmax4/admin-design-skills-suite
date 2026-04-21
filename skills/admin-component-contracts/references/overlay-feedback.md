@@ -72,10 +72,10 @@
 - 使用上限：
   只有当 `Message` 装不下、但又不值得弹 `Modal` 时才使用
 
-## 前端落地标准
+## 实现落地标准
 
-- 页面和业务组件里统一通过 `useAdminFeedback()` 触发程序化反馈。
-- 高风险确认优先 `confirmRisk()`，把误触关闭保护、默认按钮文案和标题结构收口到同一层。
-- 短结果优先 `info / success / warning / error`，复杂异步结果优先 `notifyInfo / notifySuccess / notifyWarning / notifyError`。
-- 根布局必须包裹 `a-app`，否则不认为反馈上下文完整。
-- 禁止在页面里直接散落 `message.*`、`notification.*`、`Modal.confirm()` 或 `AntApp.useApp()`。
+- 页面和业务组件应统一通过项目已有的反馈入口触发程序化反馈。
+- 高风险确认应优先收口到统一确认封装，避免每页各写一套关闭保护和按钮语义。
+- 轻量结果反馈与复杂异步反馈应分别走统一入口，不在页面里临时拼装。
+- 应用根层必须提供完整的全局反馈上下文。
+- 禁止在页面里直接散落底层反馈 API 调用，绕开项目统一封装。
