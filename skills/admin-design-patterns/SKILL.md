@@ -51,13 +51,14 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/admin-design-patterns 收页面结构` 或 `/admin-design-patterns shape page structure`
 - 页面结构不清时，先读 `references/page-paradigms.md`
 - 模式块选择不清时，先读 `references/pattern-catalog.md`
 - 判断是否真的要新建模式时，读 `references/review-checklist.md`
 
 ## 默认做法
 
-如果用户只给一句模糊需求，默认先回答这 5 个问题：
+如果用户只给一句话，且当前输入不足以判断页面结构，默认先回答这 5 个问题：
 
 1. 这是哪种页面范式？
 2. 这个页面的第一优先动作是什么？

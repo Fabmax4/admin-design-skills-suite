@@ -52,6 +52,7 @@ description: Use when an admin/backend page needs data expression decisions; dec
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/admin-visualization 判断是否上图` 或 `/admin-visualization decide visualization`
 - 适合图形化的场景看 `references/chart-use-cases.md`
 - 不适合图形化的场景看 `references/non-chart-cases.md`
 - 各类表达方式的选型规则看 `references/presentation-rules.md`

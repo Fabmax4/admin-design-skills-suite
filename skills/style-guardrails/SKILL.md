@@ -49,6 +49,7 @@ description: Use when an admin/backend UI needs hard visual guardrails for color
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/style-guardrails 收视觉` 或 `/style-guardrails tighten visual guardrails`
 - 颜色、圆角、密度看 `references/tokens.md`
 - 后台骨架和表面处理看 `references/layout-and-surfaces.md`
 - 可访问性底线看 `references/accessibility-baseline.md`

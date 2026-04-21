@@ -19,7 +19,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 1. 明确审查对象
    先说清是在审查页面方案、组件抽象、设计稿，还是已实现界面。
 2. 先查前置澄清
-   如果原始需求本身模糊，先判断是否已经通过澄清或启发式问题拿到了足够线索。
+   如果原始输入信息不足，先判断是否已经通过澄清或启发式问题拿到了足够线索。
 3. 逐层检查
    依次审查：`design-principles`、`style-guardrails`、`admin-design-patterns`、`admin-component-contracts`、`admin-visualization`、`admin-motion`。
 4. 识别失效层
@@ -51,6 +51,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/admin-design-review 审查页面` 或 `/admin-design-review review page`
 - 总审查清单看 `references/review-checklist.md`
 - 常见失效模式看 `references/failure-modes.md`
 - 严重度定义看 `references/severity-model.md`

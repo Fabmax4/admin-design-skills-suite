@@ -9,7 +9,7 @@ description: Use when an admin/backend design request is still ambiguous and nee
 
 ## 何时使用
 
-- 用户给的是模糊需求，还没有稳定页面结构
+- 用户给的信息不足，还没有稳定页面结构
 - 一个后台方案看起来完整，但判断标准不清
 - 页面视觉很多，但主动作、主层级和异常链路不明确
 - 需要先做方向评审，再进入模式和组件层
@@ -17,7 +17,7 @@ description: Use when an admin/backend design request is still ambiguous and nee
 ## 工作流程
 
 1. 先判断是否需要澄清
-   如果需求里的角色、对象、主任务、成功标准不清楚，先要求澄清；如果用户自己也说不清，就用启发式问题帮助其暴露线索。
+   如果输入里的角色、对象、主任务、成功标准不清楚，先要求澄清；如果用户在澄清后仍说不清，就用启发式问题帮助其暴露线索。
 2. 明确页面任务
    先说清这个页面主要服务什么任务，是“看全局”“找对象”“处理异常”还是“维护内容”。
 3. 找第一优先动作
@@ -42,7 +42,7 @@ description: Use when an admin/backend design request is still ambiguous and nee
 ## 硬规则
 
 - 不在原则没明确前进入组件命名
-- 不在需求仍模糊时直接进入页面结构
+- 不在输入信息仍不足时直接进入页面结构
 - 不把后台页面做成展示页
 - 不让主要动作淹没在信息噪音里
 - 不忽略异常、边界和恢复链路
@@ -51,8 +51,9 @@ description: Use when an admin/backend design request is still ambiguous and nee
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/design-principles 明确需求` 或 `/design-principles clarify brief`
 - 原则定义看 `references/core-principles.md`
-- 需求模糊时先读 `references/diagnostic-questions.md`
+- 输入信息不足时先读 `references/diagnostic-questions.md`
 - 需要快速指出方向性问题时读 `references/anti-patterns.md`
 
 ## 默认做法

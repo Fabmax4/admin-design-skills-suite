@@ -68,6 +68,7 @@ description: Use when turning admin/backend design patterns into reusable compon
 
 ## 使用提醒
 
+- 最短发起格式可写成 `/admin-component-contracts 抽组件契约` 或 `/admin-component-contracts define component contracts`
 - 契约定义看 `references/contracts.md`
 - 浮层和反馈边界看 `references/overlay-feedback.md`
 - 现有实现映射看 `references/implementation-map.md`
