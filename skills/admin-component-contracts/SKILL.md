@@ -85,3 +85,4 @@ description: Use when turning admin/backend design patterns into reusable compon
 - 浮层和反馈边界看 `references/overlay-feedback.md`
 - 现有实现映射看 `references/implementation-map.md`
 - 新组件判定看 `references/new-component-test.md`
+- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：契约字段不要直接甩列表，翻译成"这页推荐哪几件套 + 每件套解决什么 + ant-design-vue 对应组件"的段落叙述

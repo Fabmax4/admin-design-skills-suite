@@ -56,6 +56,7 @@ description: Use when an admin/backend page needs data expression decisions; dec
 - 适合图形化的场景看 `references/chart-use-cases.md`
 - 不适合图形化的场景看 `references/non-chart-cases.md`
 - 各类表达方式的选型规则看 `references/presentation-rules.md`
+- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：图表建议要讲"用户看完这块要做什么动作"，不是只回答"上不上图"
 
 ## 默认做法
 

@@ -11,7 +11,8 @@
     "admin-visualization",
     "admin-motion",
     "admin-design-review",
-    "admin-design-orchestrator"
+    "admin-design-orchestrator",
+    "admin-output-voice"
   ],
   "skills": [
     {
@@ -53,6 +54,11 @@
       "name": "admin-design-orchestrator",
       "path": "skills/admin-design-orchestrator",
       "role": "entry"
+    },
+    {
+      "name": "admin-output-voice",
+      "path": "skills/admin-output-voice",
+      "role": "voice"
     }
   ]
 }

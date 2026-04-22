@@ -58,6 +58,8 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 ## 输出格式
 
+以下字段是**内部结构**，供 AI 填空用；最终对用户可见的回答必须按 `admin-output-voice` 翻译成段落叙述，不要直接把字段列表甩给用户：
+
 - `任务阶段`
 - `输入是否充分`
 - `待澄清问题`
@@ -71,9 +73,10 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 - 不在输入信息不足时直接进入组件和样式细节
 - 不在结构未定时讨论可视化和动效
-- 不为了“完整”而机械调用全部 Skill
+- 不为了"完整"而机械调用全部 Skill
 - 不跳过 review 就宣布方案稳定
-- 不把“可以先猜一下”当成跳过澄清的理由
+- 不把"可以先猜一下"当成跳过澄清的理由
+- 不把上面的"输出格式"字段列表作为最终回答交给用户——给用户看的内容必须套用 `admin-output-voice` 翻译成自然段落，并讲清每条结论背后的原因
 
 ## 使用提醒
 
@@ -89,6 +92,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 - 路由验收规则看 `references/routing-validation.md`
   这是评测层规则，用于判断分流是否正确，不直接充当页面设计规则。
 - 汇总输出模板看 `references/output-templates.md`
+- 对用户可见的最终输出统一套用 [admin-output-voice](../admin-output-voice/SKILL.md)：结论先行、代号只留严重度、讲清每条判断对用户的影响、避免规范书腔调
 
 ## 默认做法
 

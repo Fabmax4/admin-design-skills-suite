@@ -55,6 +55,7 @@ description: Use when an admin/backend design request is still ambiguous and nee
 - 原则定义看 `references/core-principles.md`
 - 输入信息不足时先读 `references/diagnostic-questions.md`
 - 需要快速指出方向性问题时读 `references/anti-patterns.md`
+- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：澄清问句也要说人话，避免"角色 / 对象 / 主任务 / 成功标准"这种字段腔
 
 ## 默认做法
 

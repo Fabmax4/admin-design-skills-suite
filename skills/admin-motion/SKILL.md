@@ -51,6 +51,7 @@ description: Use when adding or reviewing motion in an admin/backend UI; decidin
 - 合适的动效场景看 `references/good-use-cases.md`
 - 常见反模式看 `references/anti-patterns.md`
 - 可访问性和降级要求看 `references/accessibility-and-fallback.md`
+- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：动效建议要讲"没有它用户会不会漏掉状态变化"，不是只说"保留 / 删除"
 
 ## 默认做法
 

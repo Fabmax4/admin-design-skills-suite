@@ -59,6 +59,7 @@
 - [admin-motion](skills/admin-motion/SKILL.md)
 - [admin-design-review](skills/admin-design-review/SKILL.md)
 - [admin-design-orchestrator](skills/admin-design-orchestrator/SKILL.md)
+- [admin-output-voice](skills/admin-output-voice/SKILL.md)
 
 ## 文档地图
 
@@ -88,6 +89,7 @@
 - **总入口分流更稳**：`admin-design-orchestrator` 样本集扩到 `31` 条，新增 `5` 条反例（触发词误导、问题层级错配、来源未澄清、内部矛盾、主从意图混淆）和 `2` 条横向行业 case（订阅计费对账、ETL 任务监控），验证入口在非零售语境下依然能正确分流。
 - **动效硬规则更紧**：`admin-motion` 把 "转场不超过 `200ms`" 和 "重要状态不能只靠动效承载信息" 纳入硬规则，对齐 `prefers-reduced-motion` 降级底线。
 - **组件定义前先澄清**：`admin-component-contracts` 在用户只给一个组件名时，默认先回答 `5` 问（对应模式 / 最小输入 / 浮层归属 / 现有实现 / 可访问性底线），再输出契约。
+- **输出要说人话**：新增 `admin-output-voice` 作为横切 Skill，统一约束所有 skill 对用户的可见输出——结论先行、只保留 `S0–S3` 严重度不暴露内部代号、每条问题必须讲清对用户 / 业务的影响、避开"违反 / 兜底 / X 级问题"这类规范书腔调、术语译名统一、bullet 有节制。`admin-design-review` 是重灾区，已重点强调。配 `references/banned-words.md` 黑名单词表、`references/glossary.md` 中英对照、`references/before-after-examples.md` 前后对照例。
 
 ## 使用说明
 

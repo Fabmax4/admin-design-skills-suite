@@ -53,6 +53,7 @@ description: Use when an admin/backend UI needs hard visual guardrails for color
 - 颜色、圆角、密度看 `references/tokens.md`
 - 后台骨架和表面处理看 `references/layout-and-surfaces.md`
 - 可访问性底线看 `references/accessibility-baseline.md`
+- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：样式建议必须讲清"为什么收这一档"——对扫读、对密度、对可访问性的影响，不是空讲 token 档位
 
 ## 默认做法
 

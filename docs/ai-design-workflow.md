@@ -151,6 +151,33 @@ AI 在输出前至少自问：
 
 完整反例样本和路由验证集见 Skill 内部：[skills/admin-design-orchestrator/references/example-call-set.md](../skills/admin-design-orchestrator/references/example-call-set.md)。
 
+## 给人看 vs 给 AI 自己看
+
+这套 skill 里的文字服务两类读者，AI 产出时必须自己分得清：
+
+- **规范本身**（`SKILL.md`、`references/*.md`、本文档）是给 AI 看的。它用"必须 / 应 / 禁止"、`S0 / P1 / PT1 / CC1` 这种高密度的规范书腔调，目的是让 AI 不放飞——这种腔调**必要**，不要去改。
+- **AI 对用户的回答** 是给人看的。人读"违反 5 秒承诺 / 业务正确性级问题 / 结构层 + 契约层 + 数据正确性层都存在阻断问题"会头疼，还要在脑子里翻译一遍才知道是"有个会让财务数据出错的 bug"。
+
+所以 AI 把规范翻译成回答时，要做一层**转译**：把内部代号、规范词、并列名词堆，换成人能一眼看懂的句子。转译不做，就是不说人话。
+
+这一层转译由 [admin-output-voice](../skills/admin-output-voice/SKILL.md) 统一负责，所有 skill 对用户可见的输出都要套它。核心要点：
+
+- **结论先行**：第一句就是最要紧的结论，不做"审查对象 / 技术栈 / 业务定位"登记开场
+- **代号只留严重度**：用户可见输出只保留 `S0 / S1 / S2 / S3`；内部代号（`P1 / PT1 / CC1 / ST1 / VS1`）不出现
+- **讲清影响**：每条问题除了"代码/设计是什么样"，必须带一句"对用户 / 业务的后果"
+- **避开规范书腔**：不用"违反 / 偏离 / 兜底 / 硬塞 / X 级问题 / X 承诺"这类词，换成"跟 XX 对不上 / 写进了 / 会让 XX 出错的 bug"
+- **术语统一**：抽象模式名首次出现配中文译名（`Queue Block` / 队列分组卡），之后只用一套叫法
+- **Bullet 有节制**：单块 bullet 最多 `5` 条，bullet 块之间要有叙述承接，一份回答大表格最多 `1` 个
+
+重灾区是 `admin-design-review` 的产出——它文字量最大、结构化字段最多，最容易直接把"审查对象 / 前置澄清是否充分 / 结论 / 主要问题 / 问题归因层 / 严重度 / 修复顺序 / 残余风险"八个字段列表甩给用户。这是**内部结构**，必须翻译成自然段落再给。
+
+具体黑名单词、术语对照和前后对照示例见 Skill 内部：
+
+- [skills/admin-output-voice/SKILL.md](../skills/admin-output-voice/SKILL.md)
+- [skills/admin-output-voice/references/banned-words.md](../skills/admin-output-voice/references/banned-words.md)
+- [skills/admin-output-voice/references/glossary.md](../skills/admin-output-voice/references/glossary.md)
+- [skills/admin-output-voice/references/before-after-examples.md](../skills/admin-output-voice/references/before-after-examples.md)
+
 ## 从文档到真正 Skill 的落地方式
 
 当前已经开始产品化：
@@ -171,5 +198,7 @@ AI 在输出前至少自问：
   用于反馈与动效收口
 - `admin-design-review`
   用于最终审查输出是否偏题
+- `admin-output-voice`
+  用于所有 skill 对用户的可见输出，负责把内部规范腔翻译成人话
 
 到这里，渐进式 Skills 的首版调用链已经闭环。

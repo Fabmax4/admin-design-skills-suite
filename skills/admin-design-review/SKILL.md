@@ -31,6 +31,8 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 
 ## 输出格式
 
+以下字段是**内部审查结构**，供 AI 内部组织思路。最终对用户可见的 review 报告必须按 `admin-output-voice` 翻译成段落叙述——这一层是整套 skill 里对"人话"要求最高的产出，直接把字段列表甩给用户是**最常见的翻车形态**：
+
 - `审查对象`
 - `前置澄清是否充分`
 - `结论`
@@ -44,10 +46,16 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 
 - 不把结构问题伪装成视觉问题
 - 不把业务命名问题伪装成组件问题
-- 不忽略“需求本身没澄清就直接画页面”的前置失效
+- 不忽略"需求本身没澄清就直接画页面"的前置失效
 - 不在主动作不清时讨论细节动效
 - 不在原则层失效时直接进入美化建议
 - 问题必须给出归因和修复次序，不能只给感受
+- 给用户的 review 输出必须套用 `admin-output-voice`：
+  - 开头第一句就是最要紧的结论或最该先修的问题，不做"审查对象 / 技术栈"登记
+  - 不保留 `P1 / PT1 / CC1 / ST1 / VS1` 这类内部代号，只用 `S0 / S1 / S2 / S3` 严重度
+  - 每条问题必须带一句"对用户 / 业务的影响"（光说"28 列平铺"不够，要说"财务会拖横条找不到重点"）
+  - 不用"违反 XX 承诺 / XX 级问题 / 硬塞 / 兜底"这类规范书腔调
+  - 回答开头和结尾都要有一段承接叙述，不要起手就 bullet、结束就 bullet
 
 ## 使用提醒
 
@@ -56,6 +64,9 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 - 常见失效模式看 `references/failure-modes.md`
 - 严重度定义看 `references/severity-model.md`
 - 修复顺序看 `references/fix-order.md`
+- 输出语气和产出契约看 [admin-output-voice](../admin-output-voice/SKILL.md)，特别是 `references/before-after-examples.md` 里的 review 报告对照例
+- 黑名单词表看 [admin-output-voice/references/banned-words.md](../admin-output-voice/references/banned-words.md)
+- 术语译名看 [admin-output-voice/references/glossary.md](../admin-output-voice/references/glossary.md)
 
 ## 默认做法
 
