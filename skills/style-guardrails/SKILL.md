@@ -46,6 +46,8 @@ description: Use when an admin/backend UI needs hard visual guardrails for color
 - 不靠阴影做主要层级
 - 不用巨大的头部和留白稀释后台密度
 - 不牺牲键盘可达、聚焦和状态可读性
+- 状态徽章/标签默认跟随 `ant-design-vue` `<Tag>` 的内边距和圆角档位（见 `references/tokens.md` 的「徽章与标签」节），不自加 padding、不加阴影、不在下方叠原始英文枚举值
+- 页面 UI 文案非必要不用英文——按钮、标签、空状态、提示都用中文；只有品牌名、代码字段名、行业通用无译名技术词（`SQL` / `JSON`）保留原文
 
 ## 使用提醒
 
