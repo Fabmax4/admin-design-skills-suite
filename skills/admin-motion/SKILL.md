@@ -44,6 +44,7 @@ description: Use when adding or reviewing motion in an admin/backend UI; decidin
 - 同一页动效类型尽量少
 - 不做过长转场，单次过渡建议控制在 `200ms` 以内，超过 `300ms` 视为打断扫读节奏
 - 重要状态变化必须在去掉动效后依然能被文字、图标或状态色读出来；不允许只靠动效承载信息（对齐 `prefers-reduced-motion` 降级底线）
+- hover / focus 动效只承担"已可见信息的增强"——加深、加边框、加下划线、加阴影；**不承担**"从不可见到可见"的揭示（文字默认态几乎同色、悬浮才显形就是典型反例）。键盘党、触屏用户、`prefers-reduced-motion` 用户没有稳定的 hover 体验，靠 hover 才露出的信息对他们就是信息丢失；视觉层面的对比度底线见 `style-guardrails/references/accessibility-baseline.md` 的「默认态可读性」节
 
 ## 使用提醒
 

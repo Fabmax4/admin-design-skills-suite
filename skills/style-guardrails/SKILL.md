@@ -48,6 +48,8 @@ description: Use when an admin/backend UI needs hard visual guardrails for color
 - 不牺牲键盘可达、聚焦和状态可读性
 - 状态徽章/标签默认跟随 `ant-design-vue` `<Tag>` 的内边距和圆角档位（见 `references/tokens.md` 的「徽章与标签」节），不自加 padding、不加阴影、不在下方叠原始英文枚举值
 - 页面 UI 文案非必要不用英文——按钮、标签、空状态、提示都用中文；只有品牌名、代码字段名、行业通用无译名技术词（`SQL` / `JSON`）保留原文
+- 按钮、徽章、链接、状态文字的前景色与背景色必须在**默认态**就达到 WCAG AA 对比度（正文 `4.5:1`，大字 / UI 组件边界 `3:1`），不做"淡底淡字 + hover 才浮现"；hover / focus 只做背景加深、边框强化、加下划线等**增强**，不承担"从不可见到可见"的揭示（详见 `references/accessibility-baseline.md` 的「对比度底线」「默认态可读性」节）
+- 表格主键（订单号、单据号、用户 ID 等）和金额、状态等关键信息不得被装饰色块、主题色块、打码块**整体覆盖**要 hover 才显形——要打码只打部分字符（`138****1234`），不做整体遮罩
 
 ## 使用提醒
 
