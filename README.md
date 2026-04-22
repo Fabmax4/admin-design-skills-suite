@@ -79,6 +79,16 @@
 
 行业专有语境允许存在于案例层和评测层，但不应被误读成规则层。
 
+## Highlights
+
+> 记录对外可见的规则和产出变化。
+
+- **审查结果带严重度**：`admin-design-review` 的 checklist 每条标注 S0–S3（阻断 / 高 / 中 / 低），输出直接可用于修复排序。
+- **面向内部团队的 ant-design-vue 锚定**：`style-guardrails` 的间距 / 字号 / 行高档位已对齐 `ant-design` 默认值；`admin-component-contracts` 的实现映射新增 `ant-design-vue 对应` 列，把抽象模式映射到 `a-table / a-drawer / a-modal / a-steps / a-popconfirm` 等组件作为起点（不是强制映射，非该栈项目可忽略此列）。
+- **总入口分流更稳**：`admin-design-orchestrator` 样本集扩到 `31` 条，新增 `5` 条反例（触发词误导、问题层级错配、来源未澄清、内部矛盾、主从意图混淆）和 `2` 条横向行业 case（订阅计费对账、ETL 任务监控），验证入口在非零售语境下依然能正确分流。
+- **动效硬规则更紧**：`admin-motion` 把 "转场不超过 `200ms`" 和 "重要状态不能只靠动效承载信息" 纳入硬规则，对齐 `prefers-reduced-motion` 降级底线。
+- **组件定义前先澄清**：`admin-component-contracts` 在用户只给一个组件名时，默认先回答 `5` 问（对应模式 / 最小输入 / 浮层归属 / 现有实现 / 可访问性底线），再输出契约。
+
 ## 使用说明
 
 这个仓库本身就是 Skills 源。安装时，使用你本地的 Skill 安装器指向该 GitHub 仓库即可。

@@ -8,6 +8,18 @@
 - 让组件命名来自模式，而不是来自场景
 - 让业务组件只是抽象契约的语义包装
 
+## 定义组件前先回答的 5 个问题
+
+如果用户只给一个组件名，默认先回答这 5 个问题，不要直接出方案：
+
+1. 这个组件对应哪个抽象模式？（回到 `设计模式` 的模式目录）
+2. 它的最小输入、必备状态、主动作分别是什么？
+3. 它是浮层或反馈类组件吗？如果是，落在 `Dialog / Modal`、`Drawer / Side Panel`、`Popover`、`Tooltip`、`Message`、`Notification` 中哪一个？
+4. 当前项目是否已有对应实现？如果有，是直接复用、扩展，还是必须新造？
+5. 可访问性底线是否满足？（焦点、键盘、对比度、降级）
+
+这 5 个问题回答不完整时，不输出契约字段。
+
 ## 抽象组件契约
 
 ### Summary Metrics
@@ -244,6 +256,44 @@
 - 提示类信息能定量先定量，不能定量再定性。
 - 能写清数量、比例、时限、范围、阈值时，不只写情绪化判断。
 - 摘要区和提示区必须帮助用户降低不确定性，而不是重复字段或堆形容词。
+
+## ant-design-vue 起点映射
+
+这一节是**内部团队的推荐起点**，基于 `ant-design-vue` 现有组件。如果项目已有更贴合业务的包装，优先复用自己的；这一节只是给第一次选型提供一个稳定锚点，不是强制映射。非 `ant-design-vue` 项目使用者可以忽略。
+
+常用抽象模式到 `ant-design-vue` 的起点：
+
+| 抽象模式 | ant-design-vue 对应 |
+| --- | --- |
+| `Summary Metrics` | `a-card` + `a-statistic` |
+| `Status Rail` | `a-steps` |
+| `Signal Panel` | `a-alert` 或 `a-card` + 状态色 |
+| `Queue Block` | `a-card` + `a-tabs` 或 `a-segmented` |
+| `Scan Table` | `a-table` |
+| `Search Bar` | `a-input-search` |
+| `Filter Panel` | `a-form` + `a-select` / `a-date-picker` / `a-cascader` |
+| `Pagination Bar` | `a-pagination`（或 `a-table` 内置） |
+| `Column Configurator` | 自研浮层 + `a-checkbox-group` + `a-popover`（antdv 无现成） |
+| `Bulk Action Bar` | 自研粘性栏 + `a-space`（antdv 无现成） |
+| `Rule Block` | `a-descriptions` 或 `a-card` + `a-typography` |
+| `Snapshot Block` | `a-descriptions` + `a-card` |
+| `Detail Drawer` | `a-drawer` |
+| `Section Editor` | `a-form` + `a-card` |
+
+浮层与反馈起点：
+
+| 抽象模式 | ant-design-vue 对应 |
+| --- | --- |
+| `Dialog / Modal` | `a-modal` 或 `Modal.confirm()` |
+| `Drawer / Side Panel` | `a-drawer` |
+| `Popover` | `a-popover` |
+| `Tooltip` | `a-tooltip` |
+| `Message / Toast` | `message.success / .error / .warning` |
+| `Notification` | `notification.open / .success` |
+
+对 "自研" 模式块（`Column Configurator`、`Bulk Action Bar`）：`antdv` 未提供一等公民支持，团队应建立统一包装层，不在页面里散落写。
+
+完整映射（含常见实现形态、使用说明、运行时边界）见 Skill 内部：[skills/admin-component-contracts/references/implementation-map.md](../skills/admin-component-contracts/references/implementation-map.md)。
 
 ## 新组件判定标准
 

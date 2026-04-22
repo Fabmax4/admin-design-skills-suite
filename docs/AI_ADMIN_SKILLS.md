@@ -126,6 +126,13 @@
 - 第二轮样本已扩到 `18` 个，重点覆盖“混合意图”分流，验证结果见 [routing-round-2-report.md](../skills/admin-design-orchestrator/references/routing-round-2-report.md)
 - 第三轮样本已扩到 `24` 个，重点覆盖“冲突意图”分流，验证结果见 [routing-round-3-report.md](../skills/admin-design-orchestrator/references/routing-round-3-report.md)
 
+本轮内容质量里程碑：
+
+- **review 输出带严重度**：`admin-design-review` 的 [review-checklist.md](../skills/admin-design-review/references/review-checklist.md) 每条 check 已标注 S0–S3，可直接驱动修复优先级排序
+- **面向内部团队的 ant-design-vue 锚定**：`style-guardrails` 的 [tokens.md](../skills/style-guardrails/references/tokens.md) 补齐间距 / 字号 / 行高档位（对齐 `ant-design` 默认值）；`admin-component-contracts` 的 [implementation-map.md](../skills/admin-component-contracts/references/implementation-map.md) 新增 `ant-design-vue 对应` 列，作为起点而非强制映射
+- **orchestrator 覆盖面扩到 31 条**：[example-call-set.md](../skills/admin-design-orchestrator/references/example-call-set.md) 和 [routing-sample-set.yaml](../skills/admin-design-orchestrator/references/routing-sample-set.yaml) 同步新增 5 条反例（触发词误导、问题层级错配、来源未澄清、内部矛盾、主从意图混淆）+ 2 条横向行业 case（订阅计费对账、ETL 任务监控）
+- **硬规则更紧**：`admin-motion` 把“转场不超过 `200ms`”和“重要状态不能只靠动效承载信息”纳入硬规则；`admin-component-contracts` 加“命名前先回答 5 问”的默认做法；`design-principles` 在 5 问入口后追加 [diagnostic-questions.md](../skills/design-principles/references/diagnostic-questions.md) 扩展诊断题
+
 ## 渐进式 Skills 的含义
 
 这里的“渐进式”不是指功能越来越多，而是指 AI 的设计过程必须逐层推进：

@@ -122,6 +122,35 @@ AI 在输出前至少自问：
 
 - `admin-design-review`
 
+## 严重度分级 S0-S3
+
+`admin-design-review` 的每条 check 都带严重度，review 结果应直接驱动修复优先级排序：
+
+- `S0`：**阻断**，页面核心任务无法完成，必须先修（如未澄清就设计、页面任务不明、第一优先动作不明）
+- `S1`：**高优**，结构 / 模式 / 契约或可访问性底线有问题（如结构不对、组件契约缺失、关键信息无状态色兜底）
+- `S2`：**中优**，视觉、可视化、动效表达失衡（如 token 超档、动效超时、图表不必要）
+- `S3`：**低优**，细节一致性（如间距、文案、微动效）
+
+修复顺序原则：
+
+- 先修 `S0`，再修 `S1`，后补 `S2 / S3`
+- 不允许跳过 `S0 / S1` 直接收 `S2 / S3`
+- 实际评审时可根据影响范围上调或下调
+
+具体 check 到严重度的映射见 Skill 内部：[skills/admin-design-review/references/review-checklist.md](../skills/admin-design-review/references/review-checklist.md)。
+
+## 常见误分流识别
+
+`admin-design-orchestrator` 在分流前应先识别以下误分流形态，不要被字面触发词带偏：
+
+- **触发词误导**：用户说"美化后台"，不应直接进 `style-guardrails`；"美化"是结果词不是意图词，先进 `design-principles` 澄清"更干净 / 更专业 / 更轻量"哪一种。
+- **问题层级错配**：用户说"组件样式不对"，但真实问题是页面结构不对；不要把结构问题收到 `style-guardrails`。
+- **来源未澄清**：用户说"按某某参考做"，但参考物本身没审过；先澄清参考物是否稳定，再决定是否锁视觉。
+- **内部矛盾**：用户同时要"更简洁"和"更丰富"，先拦截澄清主从优先级。
+- **主从意图混淆**：用户同时提"改结构"和"改视觉"，先做结构再收视觉，不要平行处理。
+
+完整反例样本和路由验证集见 Skill 内部：[skills/admin-design-orchestrator/references/example-call-set.md](../skills/admin-design-orchestrator/references/example-call-set.md)。
+
 ## 从文档到真正 Skill 的落地方式
 
 当前已经开始产品化：

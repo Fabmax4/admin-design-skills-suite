@@ -16,6 +16,8 @@ AI 应自问：
 - 用户进入页面后先做判断，还是先处理对象？
 - 如果用户自己也说不清，我应该追问哪些线索？
 
+当需求特别模糊、用户反复说不清、或是跨团队协作场景时，可以进一步参考 `design-principles` Skill 内部的扩展诊断题：[skills/design-principles/references/diagnostic-questions.md](../skills/design-principles/references/diagnostic-questions.md)。这份扩展题按角色、输入、成功标准、异常链路四个维度给出更细问法，用来撑开对话而不是代替 5 问入口。
+
 ### 1. 清晰优先
 
 - 后台首先是工作界面，不是展示界面。
