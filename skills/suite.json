@@ -1,28 +1,30 @@
 {
   "name": "admin-design-skills-suite",
+  "version": "0.1.0",
+  "host": "codex",
+  "suite_skill": "admin-design",
   "display_name": "Admin Design Skills Suite",
   "description": "A progressive set of installable skills for AI-driven admin/backend UI design, covering principles, style guardrails, patterns, component contracts, visualization, motion, orchestration, and review.",
   "entry_skill": "admin-design-orchestrator",
   "install_order": [
-    "design-principles",
-    "style-guardrails",
+    "admin-design-principles",
+    "admin-design-style",
     "admin-design-patterns",
-    "admin-component-contracts",
-    "admin-visualization",
-    "admin-motion",
+    "admin-design-components",
+    "admin-design-visualization",
+    "admin-design-motion",
     "admin-design-review",
-    "admin-design-orchestrator",
-    "admin-output-voice"
+    "admin-design-orchestrator"
   ],
   "skills": [
     {
-      "name": "design-principles",
-      "path": "skills/design-principles",
+      "name": "admin-design-principles",
+      "path": "skills/admin-design-principles",
       "role": "foundation"
     },
     {
-      "name": "style-guardrails",
-      "path": "skills/style-guardrails",
+      "name": "admin-design-style",
+      "path": "skills/admin-design-style",
       "role": "foundation"
     },
     {
@@ -31,18 +33,18 @@
       "role": "structure"
     },
     {
-      "name": "admin-component-contracts",
-      "path": "skills/admin-component-contracts",
+      "name": "admin-design-components",
+      "path": "skills/admin-design-components",
       "role": "contract"
     },
     {
-      "name": "admin-visualization",
-      "path": "skills/admin-visualization",
+      "name": "admin-design-visualization",
+      "path": "skills/admin-design-visualization",
       "role": "expression"
     },
     {
-      "name": "admin-motion",
-      "path": "skills/admin-motion",
+      "name": "admin-design-motion",
+      "path": "skills/admin-design-motion",
       "role": "expression"
     },
     {
@@ -54,11 +56,6 @@
       "name": "admin-design-orchestrator",
       "path": "skills/admin-design-orchestrator",
       "role": "entry"
-    },
-    {
-      "name": "admin-output-voice",
-      "path": "skills/admin-output-voice",
-      "role": "voice"
     }
   ]
 }

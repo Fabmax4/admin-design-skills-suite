@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Motion"
+  short_description: "Limit admin motion to essential state feedback only"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#52C41A"
+  default_prompt: "Use $admin-design-motion to decide whether this admin interaction needs motion or just clear state feedback."

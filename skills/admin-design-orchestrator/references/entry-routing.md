@@ -54,7 +54,7 @@
 规则：
 
 - 先请求澄清
-- 如果用户在澄清后仍无法准确描述，再进入 `design-principles`
+- 如果用户在澄清后仍无法准确描述，再进入 `admin-design-principles`
 - 只有当页面范式、主任务或使用角色至少清楚到能判断起始层时，才继续分流
 
 ## 明确页面，但结构未稳
@@ -67,7 +67,7 @@
 起始 Skill：
 
 - `admin-design-patterns`
-- `admin-component-contracts`
+- `admin-design-components`
 
 ## 结构稳定，开始收视觉
 
@@ -78,7 +78,7 @@
 
 起始 Skill：
 
-- `style-guardrails`
+- `admin-design-style`
 
 ## 数据密集，开始决定表达方式
 
@@ -89,7 +89,7 @@
 
 起始 Skill：
 
-- `admin-visualization`
+- `admin-design-visualization`
 
 ## 页面已经成型，开始补反馈
 
@@ -100,7 +100,7 @@
 
 起始 Skill：
 
-- `admin-motion`
+- `admin-design-motion`
 
 ## 需要验收或 review
 
@@ -157,7 +157,7 @@
 起始 Skill：
 
 - `admin-design-patterns`
-- `admin-component-contracts`
+- `admin-design-components`
 
 ## 总入口拦截条件
 

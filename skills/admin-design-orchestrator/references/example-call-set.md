@@ -26,11 +26,11 @@
 `帮我设计一个零售兑换后台的门店履约工作台，要能先看到超时风险和待处理门店。`
 
 - `任务阶段`：模糊目标
-- `预期起始 Skill`：`design-principles`
+- `预期起始 Skill`：`admin-design-principles`
 - `预期链路`：
-  `design-principles -> admin-design-patterns -> style-guardrails -> admin-component-contracts`
+  `admin-design-principles -> admin-design-patterns -> admin-design-style -> admin-design-components`
 - `本轮不该过早进入的层`：
-  `admin-motion`
+  `admin-design-motion`
 - `验证重点`：
   是否先定义第一优先动作和页面范式，而不是直接讨论卡片样式
 
@@ -43,9 +43,9 @@
 - `任务阶段`：结构设计
 - `预期起始 Skill`：`admin-design-patterns`
 - `预期链路`：
-  `admin-design-patterns -> admin-component-contracts -> admin-design-review`
+  `admin-design-patterns -> admin-design-components -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `style-guardrails`、`admin-motion`
+  `admin-design-style`、`admin-design-motion`
 - `验证重点`：
   是否先重构模式块和列表契约，而不是被“先别讨论颜色”以外的话题带偏
 
@@ -56,11 +56,11 @@
 `商品编辑页结构先不动，把圆角、留白和头部收紧一点，更像标准后台。`
 
 - `任务阶段`：样式收敛
-- `预期起始 Skill`：`style-guardrails`
+- `预期起始 Skill`：`admin-design-style`
 - `预期链路`：
-  `style-guardrails -> admin-design-review`
+  `admin-design-style -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `design-principles`、`admin-design-patterns`
+  `admin-design-principles`、`admin-design-patterns`
 - `验证重点`：
   是否能识别“结构已定，只收视觉”的意图
 
@@ -71,11 +71,11 @@
 `补货页里有门店库存、渠道配额和覆盖天数，帮我判断哪些该做图，哪些留在表格里。`
 
 - `任务阶段`：数据表达
-- `预期起始 Skill`：`admin-visualization`
+- `预期起始 Skill`：`admin-design-visualization`
 - `预期链路`：
-  `admin-visualization -> admin-design-review`
+  `admin-design-visualization -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-motion`
+  `admin-design-motion`
 - `验证重点`：
   是否只讨论可视化取舍，不跳去做页面结构重构
 
@@ -86,11 +86,11 @@
 `异常处理台的筛选和恢复动作做完后反馈不明显，帮我补必要的动效和状态提示。`
 
 - `任务阶段`：反馈打磨
-- `预期起始 Skill`：`admin-motion`
+- `预期起始 Skill`：`admin-design-motion`
 - `预期链路`：
-  `admin-motion -> admin-design-review`
+  `admin-design-motion -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-visualization`
+  `admin-design-visualization`
 - `验证重点`：
   是否把重点放在状态反馈，而不是顺手加装饰性动画
 
@@ -118,9 +118,9 @@
 - `任务阶段`：组件抽象
 - `预期起始 Skill`：`admin-design-patterns`
 - `预期链路`：
-  `admin-design-patterns -> admin-component-contracts -> admin-design-review`
+  `admin-design-patterns -> admin-design-components -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `style-guardrails`
+  `admin-design-style`
 - `验证重点`：
   是否先回收到 `Signal Panel` 一类抽象模式，而不是继续堆业务组件名
 
@@ -131,11 +131,11 @@
 `我们要做一个支持商品、服务和兑换运营的后台，先帮我判断应该优先做哪些后台页。`
 
 - `任务阶段`：方向判断
-- `预期起始 Skill`：`design-principles`
+- `预期起始 Skill`：`admin-design-principles`
 - `预期链路`：
-  `design-principles -> admin-design-patterns`
+  `admin-design-principles -> admin-design-patterns`
 - `本轮不该过早进入的层`：
-  `style-guardrails`、`admin-motion`
+  `admin-design-style`、`admin-design-motion`
 - `验证重点`：
   是否先做页面范式规划，而不是直接进入单页设计
 
@@ -146,11 +146,11 @@
 `订单列表已经稳定了，我只想加一个上方摘要区，帮我判断哪些指标值得图形化。`
 
 - `任务阶段`：数据表达
-- `预期起始 Skill`：`admin-visualization`
+- `预期起始 Skill`：`admin-design-visualization`
 - `预期链路`：
-  `admin-visualization -> admin-design-review`
+  `admin-design-visualization -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-component-contracts`
+  `admin-design-components`
 - `验证重点`：
   是否把问题识别成摘要区可视化，而不是重新定义列表结构
 
@@ -161,9 +161,9 @@
 `这个后台现在太像营销页了，帮我拉回标准后台，但不要重做功能。`
 
 - `任务阶段`：样式收敛
-- `预期起始 Skill`：`style-guardrails`
+- `预期起始 Skill`：`admin-design-style`
 - `预期链路`：
-  `style-guardrails -> admin-design-review`
+  `admin-design-style -> admin-design-review`
 - `本轮不该过早进入的层`：
   `admin-design-patterns`
 - `验证重点`：
@@ -182,9 +182,9 @@
 - `任务阶段`：混合意图，主意图是结构设计
 - `预期起始 Skill`：`admin-design-patterns`
 - `预期链路`：
-  `admin-design-patterns -> admin-component-contracts -> style-guardrails -> admin-design-review`
+  `admin-design-patterns -> admin-design-components -> admin-design-style -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-motion`
+  `admin-design-motion`
 - `验证重点`：
   是否先处理结构，再把视觉收敛作为第二步，而不是一开始就讨论样式
 
@@ -195,11 +195,11 @@
 `先帮我规划这套零售兑换后台应该有哪些核心页面，再顺带判断哪些页面值得做图表摘要。`
 
 - `任务阶段`：混合意图，主意图是方向判断
-- `预期起始 Skill`：`design-principles`
+- `预期起始 Skill`：`admin-design-principles`
 - `预期链路`：
-  `design-principles -> admin-design-patterns -> admin-visualization -> admin-design-review`
+  `admin-design-principles -> admin-design-patterns -> admin-design-visualization -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-motion`
+  `admin-design-motion`
 - `验证重点`：
   是否先做页面范式规划，再延后处理图表取舍
 
@@ -227,9 +227,9 @@
 - `任务阶段`：混合意图，主意图是组件抽象
 - `预期起始 Skill`：`admin-design-patterns`
 - `预期链路`：
-  `admin-design-patterns -> admin-component-contracts -> admin-visualization -> admin-design-review`
+  `admin-design-patterns -> admin-design-components -> admin-design-visualization -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `style-guardrails`
+  `admin-design-style`
 - `验证重点`：
   是否先回收抽象组件，再处理它在页面里的表达方式
 
@@ -240,9 +240,9 @@
 `列表页结构先别动，先把视觉压回标准后台，再补一点必要的切换反馈。`
 
 - `任务阶段`：混合意图，主意图是样式收敛
-- `预期起始 Skill`：`style-guardrails`
+- `预期起始 Skill`：`admin-design-style`
 - `预期链路`：
-  `style-guardrails -> admin-motion -> admin-design-review`
+  `admin-design-style -> admin-design-motion -> admin-design-review`
 - `本轮不该过早进入的层`：
   `admin-design-patterns`
 - `验证重点`：
@@ -255,11 +255,11 @@
 `这个运营概览页我不确定该不该上图，如果值得上图，再看需不需要做一点趋势切换反馈。`
 
 - `任务阶段`：混合意图，主意图是数据表达
-- `预期起始 Skill`：`admin-visualization`
+- `预期起始 Skill`：`admin-design-visualization`
 - `预期链路`：
-  `admin-visualization -> admin-motion -> admin-design-review`
+  `admin-design-visualization -> admin-design-motion -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-component-contracts`
+  `admin-design-components`
 - `验证重点`：
   是否先判断图表是否必要，再延后动效决策
 
@@ -272,9 +272,9 @@
 - `任务阶段`：混合意图，主意图是结构设计
 - `预期起始 Skill`：`admin-design-patterns`
 - `预期链路`：
-  `admin-design-patterns -> admin-component-contracts -> admin-design-review`
+  `admin-design-patterns -> admin-design-components -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `style-guardrails`
+  `admin-design-style`
 - `验证重点`：
   是否先处理详情页结构，再处理规则组件抽象，不把它误判为纯组件任务
 
@@ -310,9 +310,9 @@
 `商品详情页结构先别动，但顺手把规则区重构成一套统一组件。`
 
 - `任务阶段`：冲突意图，硬约束是结构冻结
-- `预期起始 Skill`：`admin-component-contracts`
+- `预期起始 Skill`：`admin-design-components`
 - `预期链路`：
-  `admin-component-contracts -> admin-design-review`
+  `admin-design-components -> admin-design-review`
 - `本轮不该过早进入的层`：
   `admin-design-patterns`
 - `验证重点`：
@@ -325,11 +325,11 @@
 `我其实不想让页面上图，但又想做一个图表摘要区，你帮我判断有没有不靠图表的替代方案。`
 
 - `任务阶段`：冲突意图，冲突发生在数据表达层
-- `预期起始 Skill`：`admin-visualization`
+- `预期起始 Skill`：`admin-design-visualization`
 - `预期链路`：
-  `admin-visualization -> admin-design-review`
+  `admin-design-visualization -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `admin-motion`
+  `admin-design-motion`
 - `验证重点`：
   是否先识别“不要上图”是硬约束，再给出指标卡或表格信号替代，而不是硬做图表
 
@@ -340,9 +340,9 @@
 `这个页面先保持现在的营销感，但又想拉回标准后台一点，你帮我判断哪些能保留，哪些必须收掉。`
 
 - `任务阶段`：冲突意图，冲突发生在样式层
-- `预期起始 Skill`：`style-guardrails`
+- `预期起始 Skill`：`admin-design-style`
 - `预期链路`：
-  `style-guardrails -> admin-design-review`
+  `admin-design-style -> admin-design-review`
 - `本轮不该过早进入的层`：
   `admin-design-patterns`
 - `验证重点`：
@@ -385,128 +385,10 @@
 `现在这些动效先都保留，但整体要更安静一些，别影响操作。`
 
 - `任务阶段`：冲突意图，冲突发生在反馈层
-- `预期起始 Skill`：`admin-motion`
+- `预期起始 Skill`：`admin-design-motion`
 - `预期链路`：
-  `admin-motion -> admin-design-review`
+  `admin-design-motion -> admin-design-review`
 - `本轮不该过早进入的层`：
-  `style-guardrails`
+  `admin-design-style`
 - `验证重点`：
   是否先区分“必须保留的状态反馈”和“可以降级的装饰性动效”，而不是两边一起保留
-
-## 反例样本
-
-这组样本用于锚定 `routing-validation.md` 里 `Fail` 判定的典型形态。每个案例都给出容易误导入口的关键词，并标注 `Fail 路径 / Fail 原因 / 正确路径`。模型在 review 自检时应能识别这些反例。
-
-## 反例 25 “美化后台” 触发词误导
-
-用户原始请求：
-
-`帮我美化这个后台。`
-
-- `任务阶段`：反例 - 触发词误导
-- `Fail 路径`：直接进入 `style-guardrails`
-- `Fail 原因`：
-  “美化”是**结果词**不是**意图词**；没有澄清用户要的是“更干净 / 更专业 / 更轻量 / 更现代 / 更贴近某个参考”哪一种，就直接收视觉属于假修复
-- `正确起始 Skill`：`design-principles`
-- `正确链路`：
-  `design-principles -> admin-design-review -> 按澄清结论再决定是否进入 style-guardrails`
-- `验证重点`：
-  是否先启发澄清，而不是被“美化”字面带偏
-
-## 反例 26 “动画不对” 问题层错位
-
-用户原始请求：
-
-`这个页面的动画我觉得不对。`
-
-- `任务阶段`：反例 - 问题层错位
-- `Fail 路径`：直接进入 `admin-motion`
-- `Fail 原因`：
-  用户表达的是**结果不满**，底层更可能是信息层级或状态反馈问题，动画只是表层症状；若直接优化动效，用户下一轮会再次表达“还是不对”
-- `正确起始 Skill`：`admin-design-review`
-- `正确链路`：
-  `admin-design-review -> 若结论是反馈层问题再进入 admin-motion；若是信息层级问题回到 admin-design-patterns`
-- `验证重点`：
-  是否先 review 定位问题层，而不是被“动画”字面直接路由到 motion
-
-## 反例 27 “按 Figma 重做一遍” 跳过来源澄清
-
-用户原始请求：
-
-`按这个 Figma 重做一遍。`
-
-- `任务阶段`：反例 - 来源未澄清
-- `Fail 路径`：跳过澄清直接进入 `admin-design-patterns`
-- `Fail 原因`：
-  Figma 是否已经过原则层评审未知；如果 Figma 本身是营销页化或业务包装层，照搬会把坏模式固化进后台
-- `正确起始 Skill`：`design-principles`
-- `正确链路`：
-  `design-principles（确认 Figma 来源与评审状态）-> 若已通过评审再进 admin-design-patterns；若未通过先 admin-design-review`
-- `验证重点`：
-  是否先确认 Figma 是"已评审结论"还是"未评审草图"，而不是无条件实现
-
-## 反例 28 “先别改结构，重新设计一下” 内部矛盾
-
-用户原始请求：
-
-`列表页先别改结构，但重新设计一下。`
-
-- `任务阶段`：反例 - 冲突意图未识别
-- `Fail 路径`：把冲突拆成两个意图，`admin-design-patterns` 和 `admin-design-review` 都跑一遍
-- `Fail 原因`：
-  “重新设计”在后台语境下几乎必然涉及结构；两个要求相互排斥，必须先指出不能同时满足，再让用户选一边
-- `正确起始 Skill`：`admin-design-review`
-- `正确链路`：
-  `admin-design-review（明确冲突并给出取舍建议）-> 等用户确认主意图后再进入对应 Skill`
-- `验证重点`：
-  是否识别两个诉求互斥，而不是机械拼链路
-
-## 反例 29 “按钮颜色不对，页面重做一下” 主次意图错位
-
-用户原始请求：
-
-`这里的按钮颜色不对，把整个页面重做了吧。`
-
-- `任务阶段`：反例 - 主次意图错位
-- `Fail 路径`：把“按钮颜色”当主意图进入 `style-guardrails`
-- `Fail 原因`：
-  真实主意图是“整个页面重做”，按钮颜色只是**情绪触发词**；停在 style-guardrails 会漏掉主意图，用户下一轮会撤回整个方案
-- `正确起始 Skill`：`design-principles`
-- `正确链路`：
-  `design-principles（判断是否真需要重做）-> admin-design-patterns`；若用户澄清后表示“只是按钮颜色”，再退回 `style-guardrails`
-- `验证重点`：
-  是否识别出情绪触发词背后的真实意图，而不是照字面分流
-
-## 横向行业样本
-
-前面 24 条正例都落在零售 / 电商 / 运营语境。这组样本用于验证入口 Skill 在**非零售语境**下依然能做正确分流，避免模型因为训练样本分布而把"订阅计费""ETL 任务"这类陌生场景硬套回电商模板。
-
-## Case 30 订阅计费对账后台从零设计
-
-用户原始请求：
-
-`帮我设计一个订阅计费对账后台，需要看每日 / 每月应收、对账异常和人工调整。`
-
-- `任务阶段`：模糊目标（多对象、异常驱动）
-- `预期起始 Skill`：`design-principles`
-- `预期链路`：
-  `design-principles -> admin-design-patterns -> admin-component-contracts -> admin-visualization -> admin-design-review`
-- `本轮不该过早进入的层`：
-  `style-guardrails`、`admin-motion`
-- `验证重点`：
-  是否先判断“对账”的主任务是**处理异常**还是**查看金额**，而不是照着"计费"做成指标大盘；可视化取舍应放在结构确定之后
-
-## Case 31 ETL 任务监控台从零设计
-
-用户原始请求：
-
-`我们要做一个 ETL 任务监控台，需要看任务链状态、失败堆栈和重跑入口。`
-
-- `任务阶段`：模糊目标（混合任务类型）
-- `预期起始 Skill`：`design-principles`
-- `预期链路`：
-  `design-principles -> admin-design-patterns -> admin-component-contracts -> admin-design-review`
-- `本轮不该过早进入的层`：
-  `admin-visualization`（任务状态是状态表达问题，不是可视化问题）、`style-guardrails`、`admin-motion`
-- `验证重点`：
-  是否识别“监控”本质是异常驱动而不是图表展示；任务链 DAG 是否考虑过"用 `Scan Table` + `Status Rail` 承接"而不是默认做成关系图

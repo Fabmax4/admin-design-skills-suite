@@ -1,0 +1,127 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE'
+Usage: ./setup --host codex [--dest <skills-dir>] [--copy]
+
+Options:
+  --host codex        Required. Only Codex is supported in this suite.
+  --dest <dir>        Skills destination directory. Defaults to ${CODEX_HOME:-$HOME/.codex}/skills.
+  --copy              Copy files instead of creating symlinks.
+  -h, --help          Show this help.
+USAGE
+}
+
+HOST=""
+DEST="${CODEX_HOME:-$HOME/.codex}/skills"
+MODE="symlink"
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --host)
+      HOST="${2:-}"
+      shift 2
+      ;;
+    --dest)
+      DEST="${2:-}"
+      shift 2
+      ;;
+    --copy)
+      MODE="copy"
+      shift
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      usage >&2
+      exit 2
+      ;;
+  esac
+done
+
+if [ "$HOST" != "codex" ]; then
+  echo "This suite currently supports Codex only. Run: ./setup --host codex" >&2
+  exit 2
+fi
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+DEST="$(mkdir -p "$DEST" && cd "$DEST" && pwd -P)"
+
+if [ ! -f "$ROOT/SKILL.md" ] || [ ! -f "$ROOT/skills/suite.json" ]; then
+  echo "setup must be run from an Admin Design Skills Suite checkout." >&2
+  exit 1
+fi
+
+SKILL_NAMES=(
+  "admin-design-orchestrator"
+  "admin-design-principles"
+  "admin-design-patterns"
+  "admin-design-components"
+  "admin-design-style"
+  "admin-design-visualization"
+  "admin-design-motion"
+  "admin-design-review"
+)
+
+LEGACY_NAMES=(
+  "design-principles"
+  "style-guardrails"
+  "admin-component-contracts"
+  "admin-visualization"
+  "admin-motion"
+)
+
+for legacy in "${LEGACY_NAMES[@]}"; do
+  if [ -e "$DEST/$legacy" ]; then
+    echo "Migration notice: found legacy skill '$legacy' at $DEST/$legacy. It was not removed." >&2
+  fi
+done
+
+resolve_existing_dir() {
+  local path="$1"
+  if [ -e "$path" ]; then
+    (cd "$path" && pwd -P)
+  else
+    return 1
+  fi
+}
+
+install_dir() {
+  local name="$1"
+  local source="$2"
+  local target="$DEST/$name"
+  local source_real
+  source_real="$(resolve_existing_dir "$source")"
+
+  if [ -L "$target" ] || [ -e "$target" ]; then
+    local target_real=""
+    if target_real="$(resolve_existing_dir "$target" 2>/dev/null)"; then
+      if [ "$target_real" = "$source_real" ]; then
+        echo "Already installed: $name -> $source_real"
+        return 0
+      fi
+    fi
+    echo "Refusing to overwrite existing non-suite target: $target" >&2
+    exit 1
+  fi
+
+  if [ "$MODE" = "copy" ]; then
+    cp -R "$source" "$target"
+    echo "Copied: $name -> $target"
+  else
+    ln -s "$source_real" "$target"
+    echo "Linked: $name -> $source_real"
+  fi
+}
+
+install_dir "admin-design" "$ROOT"
+
+for skill in "${SKILL_NAMES[@]}"; do
+  install_dir "$skill" "$ROOT/skills/$skill"
+done
+
+echo "Admin Design Skills Suite installed for Codex at $DEST"

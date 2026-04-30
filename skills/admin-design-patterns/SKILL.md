@@ -55,7 +55,10 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
 - 页面结构不清时，先读 `references/page-paradigms.md`
 - 模式块选择不清时，先读 `references/pattern-catalog.md`
 - 判断是否真的要新建模式时，读 `references/review-checklist.md`
-- 对用户的最终输出套用 [admin-output-voice](../admin-output-voice/SKILL.md)：`Filter + Summary + Status Tabs + Table` 这种英文并列首次出现时配中文（筛选 + 汇总卡 + 状态 Tab + 表格），之后只用一套叫法
+
+## 输出语气
+
+结构建议要先说明用户会怎样找到、进入、处理和返回。不要只列“页面范式 / 主模式块 / 辅助模式块”，要把信息架构和肌肉记忆寻址讲清楚。
 
 ## 默认做法
 

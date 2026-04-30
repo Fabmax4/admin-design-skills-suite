@@ -1,7 +1,0 @@
-interface:
-  display_name: "Design Principles"
-  short_description: "Clarify admin design priorities before structure work"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/logo.svg"
-  brand_color: "#D48806"
-  default_prompt: "Use $design-principles to clarify the priorities and risks for this admin design task."

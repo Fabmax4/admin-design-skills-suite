@@ -13,12 +13,12 @@
 
 - 输入信息已足够判断页面范式、主任务和使用角色
 
-1. `design-principles`
+1. `admin-design-principles`
 2. `admin-design-patterns`
-3. `admin-component-contracts`
-4. `style-guardrails`
-5. 视情况补 `admin-visualization`
-6. 视情况补 `admin-motion`
+3. `admin-design-components`
+4. `admin-design-style`
+5. 视情况补 `admin-design-visualization`
+6. 视情况补 `admin-design-motion`
 7. `admin-design-review`
 
 ## 已有页面，要重构结构
@@ -28,7 +28,7 @@
 - 当前输入已明确页面对象和重构目标
 
 1. `admin-design-patterns`
-2. `admin-component-contracts`
+2. `admin-design-components`
 3. `admin-design-review`
 
 ## 已有结构，只想收视觉
@@ -37,8 +37,8 @@
 
 - 结构已经明确，且用户没有隐含要求重做信息架构
 
-1. `style-guardrails`
-2. 视情况补 `admin-motion`
+1. `admin-design-style`
+2. 视情况补 `admin-design-motion`
 3. `admin-design-review`
 
 ## 数据密集页，要决定图表
@@ -47,7 +47,7 @@
 
 - 页面主任务和关键判断动作已明确
 
-1. `admin-visualization`
+1. `admin-design-visualization`
 2. `admin-design-review`
 
 ## 抽象后台组件或规范
@@ -57,33 +57,33 @@
 - 输入已明确抽象目标和复用范围
 
 1. `admin-design-patterns`
-2. `admin-component-contracts`
+2. `admin-design-components`
 3. `admin-design-review`
 
 ## 输入信息不足，先澄清
 
 1. 不进入下游 Skill
 2. 先补 `目标用户 / 页面类型 / 第一优先动作 / 成功标准 / 关键约束`
-3. 用户在澄清后仍说不清时，再进入 `design-principles`
+3. 用户在澄清后仍说不清时，再进入 `admin-design-principles`
 
 ## 先重构结构，再顺手收视觉
 
 1. `admin-design-patterns`
-2. `admin-component-contracts`
-3. `style-guardrails`
+2. `admin-design-components`
+3. `admin-design-style`
 4. `admin-design-review`
 
 ## 先规划后台，再补图表取舍
 
-1. `design-principles`
+1. `admin-design-principles`
 2. `admin-design-patterns`
-3. `admin-visualization`
+3. `admin-design-visualization`
 4. `admin-design-review`
 
 ## 先收视觉，再补必要反馈
 
-1. `style-guardrails`
-2. `admin-motion`
+1. `admin-design-style`
+2. `admin-design-motion`
 3. `admin-design-review`
 
 ## 先 review，再给下一轮 Skill 链路
@@ -97,7 +97,7 @@
 
 ## 结构冻结下做组件统一
 
-1. `admin-component-contracts`
+1. `admin-design-components`
 2. `admin-design-review`
 
 说明：
@@ -107,7 +107,7 @@
 
 ## 不想上图，但想做图表摘要区
 
-1. `admin-visualization`
+1. `admin-design-visualization`
 2. `admin-design-review`
 
 说明：

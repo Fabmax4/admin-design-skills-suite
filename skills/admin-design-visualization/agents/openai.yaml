@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Visualization"
+  short_description: "Decide when admin data needs charts, tables, or signals"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#13C2C2"
+  default_prompt: "Use $admin-design-visualization to choose the right data expression for this admin page."

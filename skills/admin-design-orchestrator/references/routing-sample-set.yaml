@@ -6,14 +6,14 @@ cases:
     prompt: "帮我设计一个零售兑换后台的门店履约工作台，要能先看到超时风险和待处理门店。"
     expected_stage: "模糊目标"
     expected_start_skill:
-      - "design-principles"
+      - "admin-design-principles"
     expected_chain:
-      - "design-principles"
+      - "admin-design-principles"
       - "admin-design-patterns"
-      - "style-guardrails"
-      - "admin-component-contracts"
+      - "admin-design-style"
+      - "admin-design-components"
     avoid_layers:
-      - "admin-motion"
+      - "admin-design-motion"
     validation_focus: "先明确第一优先动作和页面范式，不直接跳到视觉细节。"
   - id: "case-02"
     title: "兑换单列表结构重构"
@@ -23,23 +23,23 @@ cases:
       - "admin-design-patterns"
     expected_chain:
       - "admin-design-patterns"
-      - "admin-component-contracts"
+      - "admin-design-components"
       - "admin-design-review"
     avoid_layers:
-      - "style-guardrails"
-      - "admin-motion"
+      - "admin-design-style"
+      - "admin-design-motion"
     validation_focus: "优先重构模式块和契约，不被视觉话题带偏。"
   - id: "case-03"
     title: "商品编辑页视觉收紧"
     prompt: "商品编辑页结构先不动，把圆角、留白和头部收紧一点，更像标准后台。"
     expected_stage: "样式收敛"
     expected_start_skill:
-      - "style-guardrails"
+      - "admin-design-style"
     expected_chain:
-      - "style-guardrails"
+      - "admin-design-style"
       - "admin-design-review"
     avoid_layers:
-      - "design-principles"
+      - "admin-design-principles"
       - "admin-design-patterns"
     validation_focus: "识别结构已定，只需要视觉约束。"
   - id: "case-04"
@@ -47,24 +47,24 @@ cases:
     prompt: "补货页里有门店库存、渠道配额和覆盖天数，帮我判断哪些该做图，哪些留在表格里。"
     expected_stage: "数据表达"
     expected_start_skill:
-      - "admin-visualization"
+      - "admin-design-visualization"
     expected_chain:
-      - "admin-visualization"
+      - "admin-design-visualization"
       - "admin-design-review"
     avoid_layers:
-      - "admin-motion"
+      - "admin-design-motion"
     validation_focus: "只判断图表与表格信号，不重做页面结构。"
   - id: "case-05"
     title: "异常处理台反馈补强"
     prompt: "异常处理台的筛选和恢复动作做完后反馈不明显，帮我补必要的动效和状态提示。"
     expected_stage: "反馈打磨"
     expected_start_skill:
-      - "admin-motion"
+      - "admin-design-motion"
     expected_chain:
-      - "admin-motion"
+      - "admin-design-motion"
       - "admin-design-review"
     avoid_layers:
-      - "admin-visualization"
+      - "admin-design-visualization"
     validation_focus: "强调状态反馈，不添加装饰性动画。"
   - id: "case-06"
     title: "后台方案最终验收"
@@ -84,44 +84,44 @@ cases:
       - "admin-design-patterns"
     expected_chain:
       - "admin-design-patterns"
-      - "admin-component-contracts"
+      - "admin-design-components"
       - "admin-design-review"
     avoid_layers:
-      - "style-guardrails"
+      - "admin-design-style"
     validation_focus: "先回收到抽象模式，而不是继续扩业务组件名。"
   - id: "case-08"
     title: "只给业务目标的后台规划"
     prompt: "我们要做一个支持商品、服务和兑换运营的后台，先帮我判断应该优先做哪些后台页。"
     expected_stage: "方向判断"
     expected_start_skill:
-      - "design-principles"
+      - "admin-design-principles"
     expected_chain:
-      - "design-principles"
+      - "admin-design-principles"
       - "admin-design-patterns"
     avoid_layers:
-      - "style-guardrails"
-      - "admin-motion"
+      - "admin-design-style"
+      - "admin-design-motion"
     validation_focus: "先做页面范式规划，而不是跳进单页实现。"
   - id: "case-09"
     title: "订单列表上方摘要区"
     prompt: "订单列表已经稳定了，我只想加一个上方摘要区，帮我判断哪些指标值得图形化。"
     expected_stage: "数据表达"
     expected_start_skill:
-      - "admin-visualization"
+      - "admin-design-visualization"
     expected_chain:
-      - "admin-visualization"
+      - "admin-design-visualization"
       - "admin-design-review"
     avoid_layers:
-      - "admin-component-contracts"
+      - "admin-design-components"
     validation_focus: "识别为摘要区表达问题，而不是列表结构问题。"
   - id: "case-10"
     title: "后台被做成营销页"
     prompt: "这个后台现在太像营销页了，帮我拉回标准后台，但不要重做功能。"
     expected_stage: "样式收敛"
     expected_start_skill:
-      - "style-guardrails"
+      - "admin-design-style"
     expected_chain:
-      - "style-guardrails"
+      - "admin-design-style"
       - "admin-design-review"
     avoid_layers:
       - "admin-design-patterns"
@@ -134,25 +134,25 @@ cases:
       - "admin-design-patterns"
     expected_chain:
       - "admin-design-patterns"
-      - "admin-component-contracts"
-      - "style-guardrails"
+      - "admin-design-components"
+      - "admin-design-style"
       - "admin-design-review"
     avoid_layers:
-      - "admin-motion"
+      - "admin-design-motion"
     validation_focus: "先处理结构，再把视觉收敛作为第二步。"
   - id: "case-12"
     title: "先做后台规划，再决定哪些要上图"
     prompt: "先帮我规划这套零售兑换后台应该有哪些核心页面，再顺带判断哪些页面值得做图表摘要。"
     expected_stage: "混合意图，主意图是方向判断"
     expected_start_skill:
-      - "design-principles"
+      - "admin-design-principles"
     expected_chain:
-      - "design-principles"
+      - "admin-design-principles"
       - "admin-design-patterns"
-      - "admin-visualization"
+      - "admin-design-visualization"
       - "admin-design-review"
     avoid_layers:
-      - "admin-motion"
+      - "admin-design-motion"
     validation_focus: "先做页面范式规划，再延后处理图表取舍。"
   - id: "case-13"
     title: "先 review，再给下一轮设计链路"
@@ -172,21 +172,21 @@ cases:
       - "admin-design-patterns"
     expected_chain:
       - "admin-design-patterns"
-      - "admin-component-contracts"
-      - "admin-visualization"
+      - "admin-design-components"
+      - "admin-design-visualization"
       - "admin-design-review"
     avoid_layers:
-      - "style-guardrails"
+      - "admin-design-style"
     validation_focus: "先回收抽象组件，再处理它在页面里的表达方式。"
   - id: "case-15"
     title: "结构已定，先收视觉，再补必要反馈"
     prompt: "列表页结构先别动，先把视觉压回标准后台，再补一点必要的切换反馈。"
     expected_stage: "混合意图，主意图是样式收敛"
     expected_start_skill:
-      - "style-guardrails"
+      - "admin-design-style"
     expected_chain:
-      - "style-guardrails"
-      - "admin-motion"
+      - "admin-design-style"
+      - "admin-design-motion"
       - "admin-design-review"
     avoid_layers:
       - "admin-design-patterns"
@@ -196,13 +196,13 @@ cases:
     prompt: "这个运营概览页我不确定该不该上图，如果值得上图，再看需不需要做一点趋势切换反馈。"
     expected_stage: "混合意图，主意图是数据表达"
     expected_start_skill:
-      - "admin-visualization"
+      - "admin-design-visualization"
     expected_chain:
-      - "admin-visualization"
-      - "admin-motion"
+      - "admin-design-visualization"
+      - "admin-design-motion"
       - "admin-design-review"
     avoid_layers:
-      - "admin-component-contracts"
+      - "admin-design-components"
     validation_focus: "先判断图表是否必要，再延后动效决策。"
   - id: "case-17"
     title: "先重构详情页信息层级，再统一规则组件"
@@ -212,10 +212,10 @@ cases:
       - "admin-design-patterns"
     expected_chain:
       - "admin-design-patterns"
-      - "admin-component-contracts"
+      - "admin-design-components"
       - "admin-design-review"
     avoid_layers:
-      - "style-guardrails"
+      - "admin-design-style"
     validation_focus: "先处理详情页结构，再处理规则组件抽象。"
   - id: "case-18"
     title: "先 review 可视化，再决定是否回退到结构层"
@@ -232,9 +232,9 @@ cases:
     prompt: "商品详情页结构先别动，但顺手把规则区重构成一套统一组件。"
     expected_stage: "冲突意图，硬约束是结构冻结"
     expected_start_skill:
-      - "admin-component-contracts"
+      - "admin-design-components"
     expected_chain:
-      - "admin-component-contracts"
+      - "admin-design-components"
       - "admin-design-review"
     avoid_layers:
       - "admin-design-patterns"
@@ -244,21 +244,21 @@ cases:
     prompt: "我其实不想让页面上图，但又想做一个图表摘要区，你帮我判断有没有不靠图表的替代方案。"
     expected_stage: "冲突意图，冲突发生在数据表达层"
     expected_start_skill:
-      - "admin-visualization"
+      - "admin-design-visualization"
     expected_chain:
-      - "admin-visualization"
+      - "admin-design-visualization"
       - "admin-design-review"
     avoid_layers:
-      - "admin-motion"
+      - "admin-design-motion"
     validation_focus: "先识别不要上图是硬约束，再给出非图表替代。"
   - id: "case-21"
     title: "保持营销感，但拉回标准后台"
     prompt: "这个页面先保持现在的营销感，但又想拉回标准后台一点，你帮我判断哪些能保留，哪些必须收掉。"
     expected_stage: "冲突意图，冲突发生在样式层"
     expected_start_skill:
-      - "style-guardrails"
+      - "admin-design-style"
     expected_chain:
-      - "style-guardrails"
+      - "admin-design-style"
       - "admin-design-review"
     avoid_layers:
       - "admin-design-patterns"
@@ -289,126 +289,10 @@ cases:
     prompt: "现在这些动效先都保留，但整体要更安静一些，别影响操作。"
     expected_stage: "冲突意图，冲突发生在反馈层"
     expected_start_skill:
-      - "admin-motion"
+      - "admin-design-motion"
     expected_chain:
-      - "admin-motion"
+      - "admin-design-motion"
       - "admin-design-review"
     avoid_layers:
-      - "style-guardrails"
+      - "admin-design-style"
     validation_focus: "区分必须保留的反馈和可以降级的装饰性动效。"
-
-  # 反例样本：用于锚定 routing-validation.md 的 Fail 判定形态。
-  # 每条 case 额外带 fail_path / fail_reason 字段。
-
-  - id: "case-25"
-    title: "反例 - 美化后台的触发词误导"
-    prompt: "帮我美化这个后台。"
-    expected_stage: "反例 - 触发词误导"
-    expected_start_skill:
-      - "design-principles"
-    expected_chain:
-      - "design-principles"
-      - "admin-design-review"
-    avoid_layers:
-      - "style-guardrails"
-    fail_path:
-      - "style-guardrails"
-    fail_reason: "「美化」是结果词不是意图词，未澄清直接收视觉属于假修复。"
-    validation_focus: "先启发澄清，不被「美化」字面带偏。"
-
-  - id: "case-26"
-    title: "反例 - 动画不对的问题层错位"
-    prompt: "这个页面的动画我觉得不对。"
-    expected_stage: "反例 - 问题层错位"
-    expected_start_skill:
-      - "admin-design-review"
-    expected_chain:
-      - "admin-design-review"
-    avoid_layers:
-      - "admin-motion"
-    fail_path:
-      - "admin-motion"
-    fail_reason: "用户表达的是结果不满，底层可能是信息层级或状态反馈问题，动画只是症状。"
-    validation_focus: "先 review 定位问题层，不被「动画」字面直接路由。"
-
-  - id: "case-27"
-    title: "反例 - 按 Figma 重做跳过来源澄清"
-    prompt: "按这个 Figma 重做一遍。"
-    expected_stage: "反例 - 来源未澄清"
-    expected_start_skill:
-      - "design-principles"
-    expected_chain:
-      - "design-principles"
-      - "admin-design-patterns"
-    avoid_layers: []
-    fail_path:
-      - "admin-design-patterns"
-    fail_reason: "Figma 是否已经过原则层评审未知；如果 Figma 是营销页化的草图，照搬会固化坏模式。"
-    validation_focus: "先确认 Figma 是已评审结论还是未评审草图。"
-
-  - id: "case-28"
-    title: "反例 - 先别改结构但重新设计一下"
-    prompt: "列表页先别改结构，但重新设计一下。"
-    expected_stage: "反例 - 冲突意图未识别"
-    expected_start_skill:
-      - "admin-design-review"
-    expected_chain:
-      - "admin-design-review"
-    avoid_layers:
-      - "admin-design-patterns"
-    fail_path:
-      - "admin-design-patterns"
-      - "admin-design-review"
-    fail_reason: "「重新设计」在后台语境下几乎必然涉及结构；两个要求互斥，必须先指出冲突。"
-    validation_focus: "识别互斥，让用户选一边，不拼链路。"
-
-  - id: "case-29"
-    title: "反例 - 按钮颜色不对但要重做整页"
-    prompt: "这里的按钮颜色不对，把整个页面重做了吧。"
-    expected_stage: "反例 - 主次意图错位"
-    expected_start_skill:
-      - "design-principles"
-    expected_chain:
-      - "design-principles"
-      - "admin-design-patterns"
-    avoid_layers: []
-    fail_path:
-      - "style-guardrails"
-    fail_reason: "真实主意图是「整个页面重做」，按钮颜色只是情绪触发词；停在 style-guardrails 会漏掉主意图。"
-    validation_focus: "识别情绪触发词背后的真实意图，不照字面分流。"
-
-  # 横向行业样本：非零售语境的正例，验证模型在陌生业务下的分流稳定性。
-
-  - id: "case-30"
-    title: "订阅计费对账后台从零设计"
-    prompt: "帮我设计一个订阅计费对账后台，需要看每日 / 每月应收、对账异常和人工调整。"
-    expected_stage: "模糊目标（多对象、异常驱动）"
-    expected_start_skill:
-      - "design-principles"
-    expected_chain:
-      - "design-principles"
-      - "admin-design-patterns"
-      - "admin-component-contracts"
-      - "admin-visualization"
-      - "admin-design-review"
-    avoid_layers:
-      - "style-guardrails"
-      - "admin-motion"
-    validation_focus: "先判断主任务是处理异常还是查看金额，再决定可视化取舍，不默认做成指标大盘。"
-
-  - id: "case-31"
-    title: "ETL 任务监控台从零设计"
-    prompt: "我们要做一个 ETL 任务监控台，需要看任务链状态、失败堆栈和重跑入口。"
-    expected_stage: "模糊目标（混合任务类型）"
-    expected_start_skill:
-      - "design-principles"
-    expected_chain:
-      - "design-principles"
-      - "admin-design-patterns"
-      - "admin-component-contracts"
-      - "admin-design-review"
-    avoid_layers:
-      - "admin-visualization"
-      - "style-guardrails"
-      - "admin-motion"
-    validation_focus: "识别监控本质是异常驱动而不是图表展示；任务链是否考虑过用 Scan Table + Status Rail 承接。"

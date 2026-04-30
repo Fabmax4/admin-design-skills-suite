@@ -16,12 +16,12 @@
 
 - `Prompt`：帮我设计一个零售兑换后台的门店履约工作台，要能先看到超时风险和待处理门店。
 - `Expected Stage`：模糊目标
-- `Expected Start Skill`：design-principles
-- `Expected Chain`：design-principles -> admin-design-patterns -> style-guardrails -> admin-component-contracts
-- `Avoid Layers`：admin-motion
+- `Expected Start Skill`：admin-design-principles
+- `Expected Chain`：admin-design-principles -> admin-design-patterns -> admin-design-style -> admin-design-components
+- `Avoid Layers`：admin-design-motion
 - `Validation Focus`：先明确第一优先动作和页面范式，不直接跳到视觉细节。
-- `Actual Start Skill`：design-principles
-- `Actual Chain`：design-principles -> admin-design-patterns -> style-guardrails -> admin-component-contracts
+- `Actual Start Skill`：admin-design-principles
+- `Actual Chain`：admin-design-principles -> admin-design-patterns -> admin-design-style -> admin-design-components
 - `Verdict`：Pass
 - `Notes`：当前入口规则能正确识别“从零开始设计后台页”的上层优先顺序，没有提前进入动效层。
 
@@ -30,11 +30,11 @@
 - `Prompt`：现有兑换单列表信息太乱，帮我重构结构，但先别讨论颜色。
 - `Expected Stage`：结构设计
 - `Expected Start Skill`：admin-design-patterns
-- `Expected Chain`：admin-design-patterns -> admin-component-contracts -> admin-design-review
-- `Avoid Layers`：style-guardrails, admin-motion
+- `Expected Chain`：admin-design-patterns -> admin-design-components -> admin-design-review
+- `Avoid Layers`：admin-design-style, admin-design-motion
 - `Validation Focus`：优先重构模式块和契约，不被视觉话题带偏。
 - `Actual Start Skill`：admin-design-patterns
-- `Actual Chain`：admin-design-patterns -> admin-component-contracts -> admin-design-review
+- `Actual Chain`：admin-design-patterns -> admin-design-components -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：能够优先识别“结构重构”而不是“视觉优化”，链路长度也保持在最小范围。
 
@@ -42,12 +42,12 @@
 
 - `Prompt`：商品编辑页结构先不动，把圆角、留白和头部收紧一点，更像标准后台。
 - `Expected Stage`：样式收敛
-- `Expected Start Skill`：style-guardrails
-- `Expected Chain`：style-guardrails -> admin-design-review
-- `Avoid Layers`：design-principles, admin-design-patterns
+- `Expected Start Skill`：admin-design-style
+- `Expected Chain`：admin-design-style -> admin-design-review
+- `Avoid Layers`：admin-design-principles, admin-design-patterns
 - `Validation Focus`：识别结构已定，只需要视觉约束。
-- `Actual Start Skill`：style-guardrails
-- `Actual Chain`：style-guardrails -> admin-design-review
+- `Actual Start Skill`：admin-design-style
+- `Actual Chain`：admin-design-style -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：当前分流规则能正确识别“结构先不动”的约束，未回退到结构层。
 
@@ -55,12 +55,12 @@
 
 - `Prompt`：补货页里有门店库存、渠道配额和覆盖天数，帮我判断哪些该做图，哪些留在表格里。
 - `Expected Stage`：数据表达
-- `Expected Start Skill`：admin-visualization
-- `Expected Chain`：admin-visualization -> admin-design-review
-- `Avoid Layers`：admin-motion
+- `Expected Start Skill`：admin-design-visualization
+- `Expected Chain`：admin-design-visualization -> admin-design-review
+- `Avoid Layers`：admin-design-motion
 - `Validation Focus`：只判断图表与表格信号，不重做页面结构。
-- `Actual Start Skill`：admin-visualization
-- `Actual Chain`：admin-visualization -> admin-design-review
+- `Actual Start Skill`：admin-design-visualization
+- `Actual Chain`：admin-design-visualization -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：可视化任务被正确识别为表达层问题，没有被误判成页面结构问题。
 
@@ -68,12 +68,12 @@
 
 - `Prompt`：异常处理台的筛选和恢复动作做完后反馈不明显，帮我补必要的动效和状态提示。
 - `Expected Stage`：反馈打磨
-- `Expected Start Skill`：admin-motion
-- `Expected Chain`：admin-motion -> admin-design-review
-- `Avoid Layers`：admin-visualization
+- `Expected Start Skill`：admin-design-motion
+- `Expected Chain`：admin-design-motion -> admin-design-review
+- `Avoid Layers`：admin-design-visualization
 - `Validation Focus`：强调状态反馈，不添加装饰性动画。
-- `Actual Start Skill`：admin-motion
-- `Actual Chain`：admin-motion -> admin-design-review
+- `Actual Start Skill`：admin-design-motion
+- `Actual Chain`：admin-design-motion -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：反馈补强被正确路由到动效层，且 review 只在末尾进入。
 
@@ -95,11 +95,11 @@
 - `Prompt`：我想把库存健康、门店压力、渠道效率统一抽成一类后台组件，先别写页面。
 - `Expected Stage`：组件抽象
 - `Expected Start Skill`：admin-design-patterns
-- `Expected Chain`：admin-design-patterns -> admin-component-contracts -> admin-design-review
-- `Avoid Layers`：style-guardrails
+- `Expected Chain`：admin-design-patterns -> admin-design-components -> admin-design-review
+- `Avoid Layers`：admin-design-style
 - `Validation Focus`：先回收到抽象模式，而不是继续扩业务组件名。
 - `Actual Start Skill`：admin-design-patterns
-- `Actual Chain`：admin-design-patterns -> admin-component-contracts -> admin-design-review
+- `Actual Chain`：admin-design-patterns -> admin-design-components -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：本轮同时补齐了 `entry-routing.md` 和 `workflow-recipes.md` 里的“组件 / 规范抽象”路径，当前规则已能稳定承接这类任务。
 
@@ -107,12 +107,12 @@
 
 - `Prompt`：我们要做一个支持商品、服务和兑换运营的后台，先帮我判断应该优先做哪些后台页。
 - `Expected Stage`：方向判断
-- `Expected Start Skill`：design-principles
-- `Expected Chain`：design-principles -> admin-design-patterns
-- `Avoid Layers`：style-guardrails, admin-motion
+- `Expected Start Skill`：admin-design-principles
+- `Expected Chain`：admin-design-principles -> admin-design-patterns
+- `Avoid Layers`：admin-design-style, admin-design-motion
 - `Validation Focus`：先做页面范式规划，而不是跳进单页设计。
-- `Actual Start Skill`：design-principles
-- `Actual Chain`：design-principles -> admin-design-patterns
+- `Actual Start Skill`：admin-design-principles
+- `Actual Chain`：admin-design-principles -> admin-design-patterns
 - `Verdict`：Pass
 - `Notes`：后台规划型需求会先走方向判断，再进入页面范式层，没有过早下钻。
 
@@ -120,12 +120,12 @@
 
 - `Prompt`：订单列表已经稳定了，我只想加一个上方摘要区，帮我判断哪些指标值得图形化。
 - `Expected Stage`：数据表达
-- `Expected Start Skill`：admin-visualization
-- `Expected Chain`：admin-visualization -> admin-design-review
-- `Avoid Layers`：admin-component-contracts
+- `Expected Start Skill`：admin-design-visualization
+- `Expected Chain`：admin-design-visualization -> admin-design-review
+- `Avoid Layers`：admin-design-components
 - `Validation Focus`：识别为摘要区表达问题，而不是列表结构问题。
-- `Actual Start Skill`：admin-visualization
-- `Actual Chain`：admin-visualization -> admin-design-review
+- `Actual Start Skill`：admin-design-visualization
+- `Actual Chain`：admin-design-visualization -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：列表结构已稳定的前提被正确保留，问题被收敛到摘要区表达层。
 
@@ -133,12 +133,12 @@
 
 - `Prompt`：这个后台现在太像营销页了，帮我拉回标准后台，但不要重做功能。
 - `Expected Stage`：样式收敛
-- `Expected Start Skill`：style-guardrails
-- `Expected Chain`：style-guardrails -> admin-design-review
+- `Expected Start Skill`：admin-design-style
+- `Expected Chain`：admin-design-style -> admin-design-review
 - `Avoid Layers`：admin-design-patterns
 - `Validation Focus`：优先收视觉边界，不轻易改业务结构。
-- `Actual Start Skill`：style-guardrails
-- `Actual Chain`：style-guardrails -> admin-design-review
+- `Actual Start Skill`：admin-design-style
+- `Actual Chain`：admin-design-style -> admin-design-review
 - `Verdict`：Pass
 - `Notes`：能正确识别“功能不变，只收视觉”的边界，不会额外发起结构重构。
 

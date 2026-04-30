@@ -1,7 +1,0 @@
-interface:
-  display_name: "Style Guardrails"
-  short_description: "Keep admin UI color, density, and layout in bounds"
-  icon_small: "./assets/icon.svg"
-  icon_large: "./assets/logo.svg"
-  brand_color: "#08979C"
-  default_prompt: "Use $style-guardrails to tighten the visual guardrails for this admin interface."

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin Design"
+  short_description: "Index and route the Admin Design Skills Suite"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#FA8C16"
+  default_prompt: "Use $admin-design to understand or route the Admin Design Skills Suite."

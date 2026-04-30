@@ -31,12 +31,12 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 优先从下面顺序判断：
 
-1. `design-principles`
+1. `admin-design-principles`
 2. `admin-design-patterns`
-3. `admin-component-contracts`
-4. `style-guardrails`
-5. `admin-visualization`
-6. `admin-motion`
+3. `admin-design-components`
+4. `admin-design-style`
+5. `admin-design-visualization`
+6. `admin-design-motion`
 7. `admin-design-review`
 
 不是每次都要走到第 7 步。只有当用户明确要求 review、验收，或者方案已经成型时，才进入 `admin-design-review`。
@@ -58,7 +58,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 ## 输出格式
 
-以下字段是**内部结构**，供 AI 填空用；最终对用户可见的回答必须按 `admin-output-voice` 翻译成段落叙述，不要直接把字段列表甩给用户：
+以下字段是内部组织结构，供 AI 判断分流和收口。最终对用户可见的回答必须翻译成自然段落：先给结论，再说明为什么从这一层开始，以及本轮暂时不进入哪些层。
 
 - `任务阶段`
 - `输入是否充分`
@@ -73,15 +73,16 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 - 不在输入信息不足时直接进入组件和样式细节
 - 不在结构未定时讨论可视化和动效
-- 不为了"完整"而机械调用全部 Skill
+- 不为了“完整”而机械调用全部 Skill
 - 不跳过 review 就宣布方案稳定
-- 不把"可以先猜一下"当成跳过澄清的理由
-- 不把上面的"输出格式"字段列表作为最终回答交给用户——给用户看的内容必须套用 `admin-output-voice` 翻译成自然段落，并讲清每条结论背后的原因
+- 不把“可以先猜一下”当成跳过澄清的理由
+- 不把上面的输出字段原样交给用户，除非用户明确要求结构化表格
 
 ## 使用提醒
 
 - 用户主动调用时，优先使用 `$admin-design-orchestrator`
 - 最短发起格式可写成 `$admin-design-orchestrator 设计后台页` 或 `$admin-design-orchestrator design admin page`
+- 如果用户明确知道自己只要某一层，也可以直接用 `$admin-design-principles`、`$admin-design-patterns`、`$admin-design-review` 等显式 Skill 入口
 - 分流规则看 `references/entry-routing.md`
 - 稳定输入契约看 `references/input-contract.md`
 - 常见组合链路看 `references/workflow-recipes.md`
@@ -92,7 +93,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 - 路由验收规则看 `references/routing-validation.md`
   这是评测层规则，用于判断分流是否正确，不直接充当页面设计规则。
 - 汇总输出模板看 `references/output-templates.md`
-- 对用户可见的最终输出统一套用 [admin-output-voice](../admin-output-voice/SKILL.md)：结论先行、代号只留严重度、讲清每条判断对用户的影响、避免规范书腔调
+- 对用户可见的最终输出要结论先行、理由清楚、少用内部代号，避免规范书腔调
 
 ## 默认做法
 
