@@ -12,6 +12,7 @@ description: Suite entry for the Admin Design Skills Suite. Use when a user need
 - 用户询问这套后台设计 Skills 如何安装、调用或组织。
 - 用户不知道该用哪个 `$admin-design-*` Skill。
 - 需要确认当前仓库是否是 Codex 可安装的 Skills 套件。
+- 需要把实际工作中产生的有效范式补回技能套件。
 
 ## 默认入口
 
@@ -44,3 +45,7 @@ cd ~/.codex/skills/admin-design
 ```
 
 安装清单见 `skills/suite.json`。快速调用见 `docs/quick-start.md`。
+
+## 更新机制
+
+如果工作中出现可复用的新范式，先读 `references/update-mechanism.md`。默认先用 `npm run propose-pattern -- --write` 记录候选，通过复用性和去项目化审核后，再写入具体子 Skill 或 reference。

@@ -14,6 +14,7 @@ const publicRoots = [
   'setup',
   'agents',
   'docs',
+  'references',
   'skills',
 ];
 
@@ -80,6 +81,19 @@ const rootSkill = frontmatter(read('SKILL.md'));
 if (rootSkill.name !== 'admin-design') fail('Root SKILL.md frontmatter name must be admin-design.');
 const rootAgent = read('agents/openai.yaml');
 if (!rootAgent.includes('$admin-design')) fail('Root agents/openai.yaml default_prompt must use $admin-design.');
+
+if (!existsSync(path.join(root, 'references/update-mechanism.md'))) {
+  fail('references/update-mechanism.md is missing.');
+}
+if (!existsSync(path.join(root, 'scripts/propose-pattern.mjs'))) {
+  fail('scripts/propose-pattern.mjs is missing.');
+}
+if (!read('package.json').includes('"propose-pattern"')) {
+  fail('package.json must expose propose-pattern script.');
+}
+if (!existsSync(path.join(root, '.gitignore')) || !read('.gitignore').includes('.skill-updates/')) {
+  fail('.gitignore must ignore .skill-updates/.');
+}
 
 for (const skill of expectedSkills) {
   const skillDir = `skills/${skill}`;

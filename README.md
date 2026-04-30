@@ -55,6 +55,16 @@ npm run check
 
 校验会检查 manifest、Skill frontmatter、`agents/openai.yaml`、默认 prompt、公开文档调用名、本机绝对路径和规则层污染。
 
+## 更新机制
+
+工作中产生的新范式先进入候选池，不直接写进规则层：
+
+```bash
+npm run propose-pattern -- --title "Wide table column control" --layer components --source "real admin table review" --write
+```
+
+候选文件会写入 `.skill-updates/`，默认不提交。通过复用性、跨场景、去项目化和重复性审核后，再转写到对应 Skill 或 reference。完整流程见 [references/update-mechanism.md](references/update-mechanism.md)。
+
 ## 迁移说明
 
 公开接口统一使用 `$admin-design-*`。旧短名不再作为推荐入口；`setup` 只会检测并提示旧目录，不会自动删除用户已有 Skill。

@@ -6,7 +6,8 @@
   "description": "Codex skill suite for progressive admin and backend UI design.",
   "scripts": {
     "check": "node scripts/check-skill-suite.mjs",
-    "check:skill-suite": "node scripts/check-skill-suite.mjs"
+    "check:skill-suite": "node scripts/check-skill-suite.mjs",
+    "propose-pattern": "node scripts/propose-pattern.mjs"
   },
   "keywords": [
     "codex",
