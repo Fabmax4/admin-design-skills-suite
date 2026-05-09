@@ -10,6 +10,7 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
 ## 何时使用
 
 - 用户要新做一个后台页面
+- 用户要设计后台 UI Kit、页面模板集或可复用页面规范
 - 用户要重构后台信息架构或页面布局
 - 用户给的是业务场景，但还没有稳定结构
 - 需要判断一个“新组件”是否其实只是旧模式换了业务语义
@@ -22,12 +23,14 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
    说明这个页面最重要的处理动作是什么；如果说不清，就不要继续下钻组件。
 3. 先校正信息架构与寻址
    如果这页属于现有导航体系，先确认导航分组、进入路径、返回路径和详情进入方式是否与同类页面一致。
+   如果任务是 UI Kit 或页面模板集，先读 `references/admin-layout-specimen.md`，把侧栏、顶栏、面包屑、标签页和内容区作为布局样本处理。
 4. 选择模式块
    先选 `1` 个主模式块，再选 `0-2` 个辅助模式块。不要把所有模式都塞进一个页面。
 5. 回收业务命名
    把“对象卡”“风险卡”“位置卡”这类业务叫法回收到已有模式名；如果只是文案变了，就不要新建模式。
 6. 输出结构结论
    明确页面范式、主模式块、辅助模式块、主动作、次级信息区，以及是否真的存在模式缺口。
+   如果输出的是页面模板，继续读 `references/template-composition-annotation.md`，标注每个区域的结构责任。
 
 ## 输出格式
 
@@ -54,6 +57,8 @@ description: Use when designing, reviewing, or refactoring admin/backend page st
 - 最短发起格式可写成 `$admin-design-patterns 收页面结构` 或 `$admin-design-patterns shape page structure`
 - 页面结构不清时，先读 `references/page-paradigms.md`
 - 模式块选择不清时，先读 `references/pattern-catalog.md`
+- UI Kit 布局样本看 `references/admin-layout-specimen.md`
+- 页面模板结构标注看 `references/template-composition-annotation.md`
 - 判断是否真的要新建模式时，读 `references/review-checklist.md`
 
 ## 输出语气

@@ -10,6 +10,7 @@ description: Use when turning admin/backend design patterns into reusable compon
 ## 何时使用
 
 - 需要定义一个后台组件的输入契约
+- 需要把后台 UI Kit 中的组件整理成状态矩阵或操作样本
 - 需要判断一个业务组件是否值得独立存在
 - 需要把业务包装回收到抽象组件
 - 需要审查现有组件是否过于场景化
@@ -21,6 +22,7 @@ description: Use when turning admin/backend design patterns into reusable compon
 2. 定义契约
    至少明确：最小输入、主要状态、主动作、辅助信息、可访问性要求。
    如果它是临时任务或反馈容器，必须先判断该用 `Modal`、`Drawer`、`Popover`、`Tooltip`，还是 `Message / Notification`。
+   如果它是 UI Kit 中的基础组件，必须补充 `references/component-state-matrix.md` 里的状态矩阵。
 3. 检查命名
    命名优先使用模式名；业务名只能作为包装层，不应作为抽象层。
 4. 判断是否新增组件
@@ -29,8 +31,10 @@ description: Use when turning admin/backend design patterns into reusable compon
    如果当前项目已有对应组件实现或设计系统封装，优先复用或扩展，不要再平行造一个名字很像的新组件。
 6. 检查表格惯性
    如果模式落到表格，必须确认列顺序、列宽、横向滚动和关键字段包裹策略稳定，不允许把表格挤成逐字换行或让单元格尺寸随机波动。
+   如果是表格规范或列表模板，继续读 `references/table-operation-specimen.md`，把工具栏、批量操作、行操作、列设置和分页作为整体检查。
 7. 检查浮层边界
    如果模式落到浮层或全局反馈，必须确认是否阻断、是否保留父上下文、是否只承载轻量解释，以及关闭语义是否清晰。
+   如果需要在 Modal 和 Drawer 之间做决策，读 `references/overlay-decision-specimen.md`。
 8. 检查运行时封装
    如果当前项目已经有统一反馈入口或封装，页面实现必须复用它，不允许重新散落底层反馈调用。
 9. 检查列表高频交互
@@ -71,6 +75,9 @@ description: Use when turning admin/backend design patterns into reusable compon
 - 最短发起格式可写成 `$admin-design-components 抽组件契约` 或 `$admin-design-components define component contracts`
 - 契约定义看 `references/contracts.md`
 - 浮层和反馈边界看 `references/overlay-feedback.md`
+- UI Kit 基础组件状态矩阵看 `references/component-state-matrix.md`
+- 表格操作样本看 `references/table-operation-specimen.md`
+- 弹层决策样本看 `references/overlay-decision-specimen.md`
 - 现有实现映射看 `references/implementation-map.md`
 - 新组件判定看 `references/new-component-test.md`
 

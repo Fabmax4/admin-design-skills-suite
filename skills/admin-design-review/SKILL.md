@@ -10,6 +10,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 ## 何时使用
 
 - 用户要评审一个后台页面或一套后台方案
+- 用户要评审后台 UI Kit、设计规范包或页面模板集是否能指导后续页面生成
 - 需要判断问题出在原则、样式、模式、组件、可视化还是动效层
 - 需要给设计结果做最终把关，而不是继续发散
 - 需要输出清晰的修复顺序，而不是泛泛而谈
@@ -22,6 +23,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
    如果原始输入信息不足，先判断是否已经通过澄清或启发式问题拿到了足够线索。
 3. 逐层检查
    依次审查：`admin-design-principles`、`admin-design-patterns`、`admin-design-components`、`admin-design-style`、`admin-design-visualization`、`admin-design-motion`。
+   如果审查对象是 UI Kit 或设计规范包，先读 `references/ui-kit-review-checklist.md`，检查覆盖面是否足够。
 4. 识别失效层
    每个问题都要归因到具体层级，避免把结构问题错归到视觉问题。
 5. 评定严重度
@@ -56,6 +58,7 @@ description: Use when reviewing an admin/backend design proposal, page, componen
 
 - 最短发起格式可写成 `$admin-design-review 审查页面` 或 `$admin-design-review review page`
 - 总审查清单看 `references/review-checklist.md`
+- UI Kit 和设计规范包审查看 `references/ui-kit-review-checklist.md`
 - 常见失效模式看 `references/failure-modes.md`
 - 严重度定义看 `references/severity-model.md`
 - 修复顺序看 `references/fix-order.md`

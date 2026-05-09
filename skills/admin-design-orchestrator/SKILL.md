@@ -1,6 +1,6 @@
 ---
 name: admin-design-orchestrator
-description: Primary entry skill for admin/backend design work. Use when a user asks to design, refine, review, or extend an admin UI, admin page, admin component system, or management dashboard, and you need to choose which specialized admin design skills to apply in what order. 适用于后台设计任务总入口、Skill 分流、调度编排与收口。
+description: Primary entry skill for admin/backend design work. Use when a user asks to design, refine, review, or extend an admin UI, admin page, admin component system, management dashboard, admin UI Kit, or design specification package, and you need to choose which specialized admin design skills to apply in what order. 适用于后台设计任务总入口、Skill 分流、调度编排与收口，也适用于后台 UI Kit 和设计规范包任务。
 ---
 
 # Admin Design Orchestrator
@@ -10,6 +10,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 ## 何时使用
 
 - 用户要设计一个后台页面或后台组件
+- 用户要设计后台 UI Kit、设计规范包或组件规范集
 - 用户要优化、重构、评审一套后台设计
 - 用户只给了模糊业务目标，需要先判断从哪一层开始
 - 用户给了具体页面，但不确定该先做结构、样式还是表达
@@ -47,6 +48,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
    用 `references/input-contract.md` 判断当前输入是否足够；不够时先输出澄清问题。
 2. 读取任务意图
    在输入足够的前提下，判断用户要的是“设计”“细化”“规范化”“评审”还是“修正”。
+   如果用户要的是 UI Kit、设计规范包或组件规范集，先读 `references/ui-kit-page-set.md`，不要把它降级成单页 demo。
 3. 判断起始层
    用 `references/entry-routing.md` 决定从哪一层开始。
 4. 选择最小 Skill 组合
@@ -93,6 +95,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 - 路由验收规则看 `references/routing-validation.md`
   这是评测层规则，用于判断分流是否正确，不直接充当页面设计规则。
 - 汇总输出模板看 `references/output-templates.md`
+- UI Kit 或设计规范包任务看 `references/ui-kit-page-set.md`
 - 对用户可见的最终输出要结论先行、理由清楚、少用内部代号，避免规范书腔调
 
 ## 默认做法
