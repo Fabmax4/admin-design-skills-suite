@@ -60,6 +60,22 @@
 2. `admin-design-components`
 3. `admin-design-review`
 
+## 沉淀 Selection Action Bar 规范
+
+前提：
+
+- 输入已明确这是表格多选后的已选预览、选择汇总、批量操作、结算、开票、导出、确认或底部操作栏
+
+1. `admin-design-components`
+2. `admin-design-style`
+3. `admin-design-review`
+
+说明：
+
+- 先把它定义为 `Selection Action Bar` 契约，不先讨论品牌色或阴影
+- 再收敛页面级底栏的表面处理和遮挡防护
+- 最后检查它是否仍服务于表格选择后的主动作，而不是退化成普通摘要卡
+
 ## 输入信息不足，先澄清
 
 1. 不进入下游 Skill

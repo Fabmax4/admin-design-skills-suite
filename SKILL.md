@@ -32,6 +32,7 @@ description: Suite entry for the Admin Design Skills Suite. Use when a user need
 ## 路由规则
 
 - 只要任务是“设计、细化、优化、评审后台页面或组件”，先推荐 `$admin-design-orchestrator`。
+- 表格多选后的页面级操作统一识别为 `Selection Action Bar`（选择操作栏），也包括选择汇总操作栏、已选预览栏、批量操作栏、`Selection Summary Bar`、`Batch Action Bar`、`Bulk Action Bar`、`Selected Rows Toolbar` 等叫法。
 - 如果用户只问原则、结构、组件、视觉、图表、动效或评审中的单层问题，可以直接推荐对应子 Skill。
 - 需求信息不足时先澄清，不要假装已经能进入页面或组件设计。
 - 对用户的回答应自然说明判断理由，不要把内部字段模板原样输出。

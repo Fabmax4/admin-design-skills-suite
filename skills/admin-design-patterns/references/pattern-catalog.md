@@ -8,6 +8,7 @@
 | `Queue Block` | 承接等待处理对象 | 责任、时限、优先级、动作 | `ExceptionTaskCard`、`ExceptionBucketCard` |
 | `Rule Block` | 表达限制、策略、恢复预案 | 规则标签、规则内容、适用范围 | `RuleSummaryBlock`、`RecoveryPlaybookCard` |
 | `Snapshot Block` | 在当前上下文看对象摘要 | 对象标题、关键状态、补充字段 | `OrderSnapshotCard` |
+| `Selection Action Bar` | 表格多选后需要执行页面级主动作 | 已选数量、作用范围、跨页语义、关键指标、主动作、禁用原因 | `SelectionSummaryBar`、`SelectedRowsToolbar`、`InvoiceSelectionBar` |
 | `Section Editor` | 非线性区块编辑 | 标题、说明、区块内容 | `DetailSectionEditorCard` |
 | `Journey Editor` | 维护步骤型内容 | 步骤名、责任方、时效、说明 | `JourneyStepEditor` |
 | `List Editor` | 维护重复清单结构 | 项标题、标签或类型、描述 | `DetailHighlightEditor`、`RuleListEditor` |
@@ -18,6 +19,7 @@
 - `Queue Block` 用于“处理”
 - `Rule Block` 用于“约束”
 - `Snapshot Block` 用于“补充上下文”
+- `Selection Action Bar` 用于“把已选对象转成可提交动作”
 - `Section / Journey / List Editor` 用于“维护内容”
 
 一个页面通常只有 `1` 个主模式块；其他模式块应服务于它，而不是平权并列。

@@ -21,6 +21,7 @@ $admin-design-orchestrator 设计后台页
 $admin-design-orchestrator design admin page
 $admin-design-review 审查页面
 $admin-design-components 抽组件契约
+$admin-design-components 定义 Selection Action Bar
 $admin-design-style 收视觉
 $admin-design-visualization 判断是否上图
 ```

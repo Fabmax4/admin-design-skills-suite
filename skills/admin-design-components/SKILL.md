@@ -1,6 +1,6 @@
 ---
 name: admin-design-components
-description: Use when turning admin/backend design patterns into reusable component contracts; deciding whether to create a new component; specifying required inputs, states, actions, and accessibility; or reviewing whether an admin component is too scenario-specific. 适用于后台组件抽象、契约定义、新组件判定、复用性评审。
+description: Use when turning admin/backend design patterns into reusable component contracts; deciding whether to create a new component; specifying required inputs, states, actions, and accessibility; or reviewing whether an admin component is too scenario-specific, including Selection Action Bar / Selection Summary Bar / Batch Action Bar / Bulk Action Bar / Selected Rows Toolbar patterns. 适用于后台组件抽象、契约定义、新组件判定、复用性评审，以及选择操作栏 / 选择汇总操作栏 / 已选预览栏 / 批量操作栏等表格选择后操作契约。
 ---
 
 # Admin Component Contracts
@@ -39,6 +39,8 @@ description: Use when turning admin/backend design patterns into reusable compon
    如果当前项目已经有统一反馈入口或封装，页面实现必须复用它，不允许重新散落底层反馈调用。
 9. 检查列表高频交互
    如果当前页面是查询列表，必须确认搜索、筛选、分页的组合是否稳定；当列数超过 `15` 时是否提供列配置；列配置是否锁定关键列；批量操作是否依赖已选对象；详情抽屉是否保留返回来源和关闭确认。
+10. 检查选择操作栏
+   如果表格多选后触发批量、结算、开票、导出、确认等主动作，必须优先定义 `Selection Action Bar` 契约。常见别名包括 `Selection Summary Bar`、`Batch Action Bar`、`Bulk Action Bar`、`Selected Rows Toolbar`、选择操作栏、选择汇总操作栏和已选预览栏。契约必须包含已选数量、作用范围、跨页选择语义、关键金额或影响指标、主动作、禁用原因、清空选择和执行中状态。它是页面级操作栏，不应伪装成普通信息卡。
 
 ## 输出格式
 
@@ -68,12 +70,15 @@ description: Use when turning admin/backend design patterns into reusable compon
 - 不允许页面或业务组件直接散落底层反馈调用，绕开项目统一反馈封装
 - 不允许搜索、筛选、分页彼此割裂，破坏查询列表浏览惯性
 - 不允许批量危险动作脱离已选对象和影响范围说明
+- 不允许选择操作栏只显示按钮，不说明已选数量、范围、关键金额或影响指标和禁用原因
+- 不允许页面级选择操作栏嵌在表单卡片里，或遮挡表格、空态、分页和横向滚动控件
 - 不允许详情抽屉失去“回到列表上下文”的语义
 
 ## 使用提醒
 
 - 最短发起格式可写成 `$admin-design-components 抽组件契约` 或 `$admin-design-components define component contracts`
 - 契约定义看 `references/contracts.md`
+- 选择操作栏 / 已选预览 / 批量操作栏看 `references/selection-action-bar.md`
 - 浮层和反馈边界看 `references/overlay-feedback.md`
 - UI Kit 基础组件状态矩阵看 `references/component-state-matrix.md`
 - 表格操作样本看 `references/table-operation-specimen.md`

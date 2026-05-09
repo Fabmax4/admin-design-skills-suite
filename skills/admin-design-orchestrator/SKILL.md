@@ -1,6 +1,6 @@
 ---
 name: admin-design-orchestrator
-description: Primary entry skill for admin/backend design work. Use when a user asks to design, refine, review, or extend an admin UI, admin page, admin component system, management dashboard, admin UI Kit, or design specification package, and you need to choose which specialized admin design skills to apply in what order. 适用于后台设计任务总入口、Skill 分流、调度编排与收口，也适用于后台 UI Kit 和设计规范包任务。
+description: Primary entry skill for admin/backend design work. Use when a user asks to design, refine, review, or extend an admin UI, admin page, admin component system, management dashboard, admin UI Kit, design specification package, Selection Action Bar, selected rows toolbar, batch action bar, or similar table-selection operation pattern, and you need to choose which specialized admin design skills to apply in what order. 适用于后台设计任务总入口、Skill 分流、调度编排与收口，也适用于后台 UI Kit、设计规范包、选择操作栏 / 选择汇总操作栏 / 已选预览栏 / 批量操作栏等表格选择后操作模式。
 ---
 
 # Admin Design Orchestrator

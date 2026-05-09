@@ -52,6 +52,7 @@ description: Use when an admin/backend UI needs hard visual guardrails for color
 - 最短发起格式可写成 `$admin-design-style 收视觉` 或 `$admin-design-style tighten visual guardrails`
 - 颜色、圆角、密度看 `references/tokens.md`
 - 后台骨架和表面处理看 `references/layout-and-surfaces.md`
+- 页面级选择操作栏表面看 `references/layout-and-surfaces.md` 的 `Selection Action Bar 表面`
 - 可访问性底线看 `references/accessibility-baseline.md`
 
 ## 输出语气

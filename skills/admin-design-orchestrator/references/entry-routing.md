@@ -159,6 +159,26 @@
 - `admin-design-patterns`
 - `admin-design-components`
 
+## Selection Action Bar / 选择操作栏
+
+特征：
+
+- 用户提到表格多选、已选预览、选择汇总、批量操作、底部操作栏、sticky 操作栏、开票、结算、导出、确认等选中后主动作
+- 或用户要求把某个已选栏、批量栏、底栏沉淀为规范
+- 也可识别 `Selection Summary Bar`、`Batch Action Bar`、`Bulk Action Bar`、`Selected Rows Toolbar` 等叫法
+
+起始 Skill：
+
+- `admin-design-components`
+- `admin-design-style`
+- `admin-design-review`
+
+规则：
+
+- 先定义 `Selection Action Bar` 的输入、状态、主动作和禁用原因
+- 再收视觉表面，判断它是页面级操作 chrome 还是容器内工具条
+- 最后用 review 检查是否遮挡表格、空态、分页和横向滚动控件
+
 ## 总入口拦截条件
 
 出现以下任一情况时，总入口应先停在澄清，不继续分流：
