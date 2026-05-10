@@ -144,6 +144,20 @@
 
 1. `admin-design-review`
 
+## 工作中发现可复用经验
+
+1. 先判断它是项目偏好、评审线索、案例样本，还是可提升的通用规则
+2. 项目偏好或评审线索写入本地账本：`npm run memory:log`
+3. 可能进入套件的范式写入 `.skill-updates/`：`npm run propose-pattern -- --write`
+4. 用户审核前，不把候选写进 `SKILL.md` 或规则层 reference
+5. 用户通过后，再按 `references/update-mechanism.md` 抽象、落稿和校验
+
+说明：
+
+- 账本用于恢复项目上下文，不是公开规则
+- 跨项目读取只使用用户明确表达或已审核记录
+- 行业表达留在案例层，规则层改写为通用后台设计语言
+
 ## 使用提醒
 
 - 先满足前提条件，再套工作流

@@ -50,3 +50,5 @@ cd ~/.codex/skills/admin-design
 ## 更新机制
 
 如果工作中出现可复用的新范式，先读 `references/update-mechanism.md`。默认先用 `npm run propose-pattern -- --write` 记录候选，通过复用性和去项目化审核后，再写入具体子 Skill 或 reference。
+
+如果需要保留项目经验、评审结论或运行轨迹，先读 `references/memory-and-review-ledger.md`。本地记忆写入 `${CODEX_HOME:-$HOME/.codex}/admin-design/projects/<project-slug>/`，不进入公开仓库；只有经过用户审核的候选才能提升到规则层。

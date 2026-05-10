@@ -1,12 +1,14 @@
 {
   "name": "admin-design-skills-suite",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "type": "module",
   "description": "Codex skill suite for progressive admin and backend UI design.",
   "scripts": {
     "check": "node scripts/check-skill-suite.mjs",
     "check:skill-suite": "node scripts/check-skill-suite.mjs",
+    "memory:log": "node scripts/admin-design-learning-log.mjs",
+    "memory:search": "node scripts/admin-design-learning-search.mjs",
     "propose-pattern": "node scripts/propose-pattern.mjs"
   },
   "keywords": [

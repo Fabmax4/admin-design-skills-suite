@@ -44,19 +44,23 @@ description: Primary entry skill for admin/backend design work. Use when a user 
 
 ## 工作流程
 
-1. 先检查输入是否充分
+1. 读取可用项目记忆
+   如果任务明显延续同一项目、同一设计规范或同一轮评审，可按根套件的 `references/memory-and-review-ledger.md` 读取少量已审核记忆。只使用 `source=user-stated` 或 `status=approved/promoted` 的记录；未审核候选只能提醒用户确认，不能当作规则。
+2. 先检查输入是否充分
    用 `references/input-contract.md` 判断当前输入是否足够；不够时先输出澄清问题。
-2. 读取任务意图
+3. 读取任务意图
    在输入足够的前提下，判断用户要的是“设计”“细化”“规范化”“评审”还是“修正”。
    如果用户要的是 UI Kit、设计规范包或组件规范集，先读 `references/ui-kit-page-set.md`，不要把它降级成单页 demo。
-3. 判断起始层
+4. 判断起始层
    用 `references/entry-routing.md` 决定从哪一层开始。
-4. 选择最小 Skill 组合
+5. 选择最小 Skill 组合
    用 `references/workflow-recipes.md` 找最短可行链路，不做冗余调用。
-5. 汇总结论
+6. 汇总结论
    用 `references/output-templates.md` 输出统一结果。
-6. 必要时收口 review
+7. 必要时收口 review
    如果任务已经足够具体，最后再用 `admin-design-review` 检查偏题和修复顺序。
+8. 记录可复用经验
+   如果本轮暴露出可迁移的范式、反模式、用户偏好或评审问题，先写入本地账本或 `.skill-updates/` 候选，等待用户审核后再进入公开规则层。
 
 ## 输出格式
 
@@ -96,6 +100,7 @@ description: Primary entry skill for admin/backend design work. Use when a user 
   这是评测层规则，用于判断分流是否正确，不直接充当页面设计规则。
 - 汇总输出模板看 `references/output-templates.md`
 - UI Kit 或设计规范包任务看 `references/ui-kit-page-set.md`
+- 本地记忆和评审账本看根套件的 `references/memory-and-review-ledger.md`
 - 对用户可见的最终输出要结论先行、理由清楚、少用内部代号，避免规范书腔调
 
 ## 默认做法

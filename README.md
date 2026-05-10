@@ -66,6 +66,15 @@ npm run propose-pattern -- --title "Wide table column control" --layer component
 
 候选文件会写入 `.skill-updates/`，默认不提交。通过复用性、跨场景、去项目化和重复性审核后，再转写到对应 Skill 或 reference。完整流程见 [references/update-mechanism.md](references/update-mechanism.md)。
 
+本机可记录设计经验、评审结论和运行轨迹，帮助后续任务恢复上下文：
+
+```bash
+npm run memory:log -- --type pattern --key stable-table-reading --insight "表格默认先保证连续阅读惯性，再考虑视觉变化。" --source user-stated --confidence 10
+npm run memory:search -- --kind learning --usable --limit 5
+```
+
+本地记忆写入 `${CODEX_HOME:-$HOME/.codex}/admin-design/projects/<project-slug>/`，不提交到公开仓库。只有经过用户审核的候选才能提升到公开 Skill 规则层。账本机制见 [references/memory-and-review-ledger.md](references/memory-and-review-ledger.md)。
+
 ## 迁移说明
 
 公开接口统一使用 `$admin-design-*`。旧短名不再作为推荐入口；`setup` 只会检测并提示旧目录，不会自动删除用户已有 Skill。

@@ -12,6 +12,14 @@ npm run propose-pattern -- --title "Stable column setup for wide tables" --layer
 
 脚本会在 `.skill-updates/` 下生成候选文件。这个目录默认不提交，候选经过审核后才转写到 `skills/*/SKILL.md`、`skills/*/references/*.md` 或 `docs/*.md`。
 
+如果只是想保留项目经验、用户偏好或评审线索，先写入本地记忆账本：
+
+```bash
+npm run memory:log -- --type pattern --key stable-table-reading --insight "表格默认先保证连续阅读惯性，再考虑视觉变化。" --source user-stated --confidence 10
+```
+
+本地账本不会进入公开仓库。只有需要提升为套件规则时，才从账本转成 `.skill-updates/` 候选。账本细则见 `references/memory-and-review-ledger.md`。
+
 ## 什么算有效范式
 
 候选必须同时满足：
@@ -39,12 +47,13 @@ npm run propose-pattern -- --title "Stable column setup for wide tables" --layer
 
 ## 提交流程
 
-1. 记录候选：用 `npm run propose-pattern -- --write` 生成 `.skill-updates/*.md`。
+1. 记录线索：用 `npm run memory:log` 写入本地账本，或直接用 `npm run propose-pattern -- --write` 生成 `.skill-updates/*.md`。
 2. 归类：判断候选应该进入哪个 Skill，还是只作为案例留在 docs。
-3. 抽象：去掉行业专有名词、项目路径、框架内部实现和一次性字段名。
-4. 落稿：短规则写进 `SKILL.md`；详细判断、反例、表格写进对应 `references/*.md`。
-5. 串联：如果新范式影响分流，把 `admin-design-orchestrator` 的 routing sample 或 workflow recipe 同步更新。
-6. 校验：运行 `npm run check`，必要时再做临时安装验证。
+3. 审核：用户确认它是通用规则、案例样本、项目偏好，还是应拒绝。
+4. 抽象：去掉行业专有名词、项目路径、框架内部实现和一次性字段名。
+5. 落稿：短规则写进 `SKILL.md`；详细判断、反例、表格写进对应 `references/*.md`。
+6. 串联：如果新范式影响分流，把 `admin-design-orchestrator` 的 routing sample 或 workflow recipe 同步更新。
+7. 校验：运行 `npm run check`，必要时再做临时安装验证。
 
 ## 审核门槛
 

@@ -15,6 +15,7 @@ const publicRoots = [
   'agents',
   'docs',
   'references',
+  'scripts',
   'skills',
 ];
 
@@ -85,14 +86,29 @@ if (!rootAgent.includes('$admin-design')) fail('Root agents/openai.yaml default_
 if (!existsSync(path.join(root, 'references/update-mechanism.md'))) {
   fail('references/update-mechanism.md is missing.');
 }
+if (!existsSync(path.join(root, 'references/memory-and-review-ledger.md'))) {
+  fail('references/memory-and-review-ledger.md is missing.');
+}
 if (!existsSync(path.join(root, 'scripts/propose-pattern.mjs'))) {
   fail('scripts/propose-pattern.mjs is missing.');
+}
+if (!existsSync(path.join(root, 'scripts/admin-design-learning-log.mjs'))) {
+  fail('scripts/admin-design-learning-log.mjs is missing.');
+}
+if (!existsSync(path.join(root, 'scripts/admin-design-learning-search.mjs'))) {
+  fail('scripts/admin-design-learning-search.mjs is missing.');
 }
 if (!read('package.json').includes('"propose-pattern"')) {
   fail('package.json must expose propose-pattern script.');
 }
+if (!read('package.json').includes('"memory:log"') || !read('package.json').includes('"memory:search"')) {
+  fail('package.json must expose memory:log and memory:search scripts.');
+}
 if (!existsSync(path.join(root, '.gitignore')) || !read('.gitignore').includes('.skill-updates/')) {
   fail('.gitignore must ignore .skill-updates/.');
+}
+if (!read('.gitignore').includes('.admin-design/')) {
+  fail('.gitignore must ignore .admin-design/.');
 }
 
 for (const skill of expectedSkills) {
@@ -123,7 +139,10 @@ if (!existsSync(setupPath)) {
   fail('setup script must be executable.');
 }
 
-const files = publicRoots.flatMap(walk).filter((file) => /\.(md|yaml|json|mjs|sh)$/.test(file) || ['setup', 'VERSION'].includes(path.basename(file)));
+const files = publicRoots
+  .flatMap(walk)
+  .filter((file) => /\.(md|yaml|json|mjs|sh)$/.test(file) || ['setup', 'VERSION'].includes(path.basename(file)))
+  .filter((file) => file !== 'scripts/check-skill-suite.mjs');
 const oldPublicInvocations = [
   '$design-principles',
   '$style-guardrails',
